@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>汉得逻辑数字计算</title>
+</head>
+<body>
+	<script> //function_main(obj_arr) return:outputNmuber
+		/*猜数字的题目：
+			题目一：
+			3401	0A1B
+			4652	0A2B
+			1867	0A1B
+			2790	0A1B
+			5328	0A2B
+			8245	0A3B
+			------------
+			题目二：
+			0251	0A3B
+			4705	0A2B
+			7583	0A1B
+			5124	1A1B
+			2976	0A1B
+			8460	0A1B
+		*/
+		/*运算程序结构：
+			1.原始数据的准备start/end/obj_arr
+			2.由jian_cha()提供符合条件的索引数的数组arr
+			3.arr与obj_arr比较,找出符合条件的arr
+				arr与obj_arr.number进行单个比较
+					arr的单个元素分别于obj_arr.number的所有元素比较
+					条件变量arr_ab与obj_arr.ab进行比较
+				arr符合obj_arr中的所有number的ab条件时返回arr
+			输出结果并退出函数
+		*/
+		var function_main = function(obj_arr){
+			/*函数说明：
+				input: 计算题目obj_arr
+				return：计算结果outputNumber
+			*/
+			function main(start , end ,obj_arr){
+				/*函数说明：
+					1.arr值从start起始到end终止（找到符合条件的arr时及时推出main()）
+					2.arr与obj_arr中的每个number进行比较，全部符合时退出比较循环
+					return 找到复合条件的结果时输出arr(也是number)/否则输出false
+				*/
+				//console.log("main()");
+				for(let n=start; n<=end ;n++){
+					//arr为检查出可用索引数的数组
+					let arr = jian_cha(n);
+					if( arr == false) continue;
+					//console.log(`可用索引数:${arr}`);
+
+					//索引数字与所给条件进行对比
+					let number;
+					for(let i=0;i<obj_arr.length;i++){
+						number = bi_jiao(arr,obj_arr[i]);  //返回选中的数或false
+						if(number == false) break;
+						if(i==obj_arr.length-1) {
+							console.log(`the number:${number}`);  //输出最终结果
+							return number;
+						}
+					}
+				}
+				return false;
+			}
+
+			function jian_cha(n){
+				/*函数说明：
+					1.输入一个数字,并加工成4位数的字符串
+					2.把字符串转化成数组
+					3.逐个对比其中出现重复的单个数
+					return：没有重复单个数的输出此数/否则输出false
+				*/
+				//console.log("jian_cha()");
+				console.log(n);
+				let n_arr;
+				if(n<1000){
+					n = "0"+n;
+					n_arr = n.split('');
+				}else{
+					n = n+"";
+					n_arr = n.split('');
+				}
+				for(let i=0;i<=2;i++){
+					for(let j=i+1;j<=3;j++){
+						if(n_arr[i] == n_arr[j])return false;
+					}
+				}
+				return n_arr;
+			}
+
+			function bi_jiao(arr , obj){
+				/*函数说明：
+					1.obj对象分解为obj_arr、obj.ab数组
+					2.arr的每个元素单独与obj_arr的元素进行比较，并计算出匹配条件
+					3.匹配条件arr_ab与obj_ab进行比较
+					return： 匹配条件符合时输出arr/否则输出false
+				*/
+				//console.log("bi_jiao()");
+				const obj_arr = obj.number.split('');
+				const obj_ab = obj.ab.split('');
+				let arr_ab=[0,0],temp,return_number=[];
+
+				for(let i=0;i<arr.length;i++){
+					//input: arr[i] , obj_arr[all]
+					//return: realy 2|true 1|false 0
+					temp = bi_jiao_arr(arr[i],i,obj_arr);
+					if(temp == 0) continue;
+					if(temp == 1) arr_ab[1]++;
+					if(temp == 2) arr_ab[0]++;
+				}
+
+				if(arr_ab[0] == obj_ab[0]){
+					if(arr_ab[1] == obj_ab[1]){
+						return_number = arr;
+					}else{return_number = false;}
+				}else{return_number = false;}
+
+				// console.log(`temp:${temp},
+				// 	arr_ab:${arr_ab},
+				// 	obj_ab:${obj_ab},
+				// 	return_number:${return_number},
+				// 	obj_arr:${obj_arr}`);
+
+				return return_number;
+			}
+
+			function bi_jiao_arr(arr_number , index , obj_arr){
+				/*函数说明：
+					arr_number与obj_arr的比较
+					计算匹配具体条件：
+						数位都符合 return 2
+						只有数符合 return 1
+						都不符合   return 0
+				*/
+				//console.log("bi_jiao_arr()");
+				if(arr_number == obj_arr[index]) {return 2;}
+				for(let i=0;i<obj_arr.length;i++){
+					if(arr_number == obj_arr[i]){return 1}
+				}
+				return 0;
+			}
+
+			//开始执行处
+			const start = 123 , end = 9876;
+			//所给的计算题目
+			// obj_arr = [
+			// 	{number:'3401' , ab:'01'},
+			// 	{number:'4652' , ab:'02'},
+			// 	{number:'1867' , ab:'01'},
+			// 	{number:'2790' , ab:'01'},
+			// 	{number:'5328' , ab:'02'},
+			// 	{number:'8245' , ab:'03'}
+			// ];
+			//计算函数
+			let outputNumber = main(start,end,obj_arr);
+			if(outputNumber == false){
+				outputNumber = 'Error: not find the number!!!';
+			}
+			return outputNumber;
+		}
+	</script>
+	<script src="https://unpkg.com/vue"></script>
+  <center>
+		<div id="divID" style="background-color:rgba(50,102,106,0.2);width:300px;height:720px;">
+	    <h2>题目：</h2>
+	    <!-- 输入 -->
+	    <ul v-for="obj in input">
+	      <li>
+	        <input type="text" v-model="obj.number" style="width: 100px;">
+	        <input type="text" v-model="obj.ab" style="width: 40px">
+	      </li>
+	    </ul>
+	    <!-- 输入数据展示 -->
+	    <ul v-for="item in input" v-if="item.number!=''">
+	      <li><span>{{item.number}}</span>---<span>{{item.ab[0]}}A{{item.ab[1]}}B</span></li>
+	    </ul>
+	      <!-- 计算结果 -->
+	    <button v-on:click="ji_suan">开始计算</button>
+	    <p>{{asd}}</p>
+	    <p>{{output}}</p>
+		</div>
+	</center>
+	<script>
+		var vm = new Vue({
+			el: "#divID",
+			data: {
+				input: [
+					{number: '',ab: ''},
+					{number: '',ab: ''},
+					{number: '',ab: ''},
+					{number: '',ab: ''},
+					{number: '',ab: ''},
+					{number: '',ab: ''}
+				],
+				output: "准备就绪可以开始计算",
+				asd: ""
+			},
+			methods: {
+				ji_suan: function(){
+					let jg;
+
+          if(this.input[0].number == ''){
+          	this.asd = "";
+          	jg = '输入不完整，请重新输入';
+          }else{
+          	this.asd = this.input;
+          	this.output = "后台CPU疯狂计算中......";
+          	jg = window.function_main(this.input);
+          }
+          this.output = jg;
+				}
+			}
+		});
+	</script>
+
+
+</body>
+</html>

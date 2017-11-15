@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>快3投注模拟</title>
+		<style type="text/css">
+			.main{
+				width: 300px;
+				background-color: rgba(2,2,5,0.1);
+			}
+			.B_1{
+				color:darkmagenta ;
+			}
+			.DQX{
+				color: rgba(45,45,45,0.3);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>快3投注模拟算法</h1>
+
+
+		<script type="text/javascript">
+			var number,arr=[],num;
+			var n_d=0,n_x=0;
+			var n=0;
+
+			for(var i=0;i<10000;i++){
+				arr = [];
+				for(;arr.length<3;){
+					number=Math.floor(Math.random()*10+1);
+					if(number<7){arr.push(number);}
+				}
+
+				num = arr[0] + arr[1] + arr[2];
+				num_ = (num<=9)?'小':'大';
+				console.log(num,num_,arr); 
+				if(num_ === "大" ){
+					n_x=0;
+					n_d++;
+				}else{
+					n_d=0;
+					n_x++;
+				}
+				
+				if(n<n_d){n=n_d;}
+				if(n<n_x){n=n_x;}
+			}
+
+			console.log(n);
+		</script>
+		<p class="DQX"> 欢迎交流 </p>
+		<p class="DQX"> 如有发现bug请  @地球心  <br>写于：2016/11/某日</p>
+	</body>
+</html>

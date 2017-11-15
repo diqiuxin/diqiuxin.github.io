@@ -1,0 +1,241 @@
+
+*{margin:0;}  /* 星号*表示任何标签都引用  通用样式*/
+
+body{font: 14px/24px "Microsoft YaHei UI","华文宋体"}   /*字体宽度/高度  字体类型*/
+img{ border: 0px;}
+.wp{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.z{float:left;}             /*左对齐*/
+.y{float: right;}           /*右对齐*/
+.cl{clear: both;}           /*清楚对齐方式*/
+/************************/
+.sespansion{
+    width: 50px;
+    height: 150px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+.sespansion img{
+    width: 50px;
+}/*--------------------
+.sespansion_menus{
+    width: 165px;
+    line-height: 40px;
+     position: fixed;
+    top: 200px;
+    left: 70px;
+}
+.sespansion_menus li{
+    height: 39px;
+    list-style: none;
+    background: url("../images/nav_bg.jpg") repeat-x;
+}
+.sespansion_menus a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 28px;
+}
+.sespansion_menus a:hover{
+    color: #f60;
+}
+.sespansion_menus li.a , .sespansion_menus li:hover{
+    height: 39px;
+    background: url("../images/nav_hover.jpg") repeat-x;
+}
+---------------------*/
+/***********************/
+.top{                       /*class=top 的定义*/
+    width: 100%;            /*宽度*/
+    height: 24px;           /*高度*/
+    line-height: 24px;      /*行高*/
+    background: #303030;    /*背景颜色*/
+    color: #d8d8d8;         /*字体颜色*/
+}
+.top span{                  /*内敛块的定义*/
+    margin-right: 20px;     /*相邻两个的右间距*/
+}
+.top span.mr_0{margin:0;}
+
+.top a{                     /*超链接静态时的状态*/
+    color: #d8d8d8;         /*超链接的颜色*/
+    text-decoration: none;  /*去掉超链接的下划线*/
+}
+.top a:hover{               /*鼠标放上去的状态*/
+    color:#f60;             /*超链接的颜色*/
+}
+.top_foot{
+    width:960px;
+    height: 100px;
+    margin:0 auto;
+    #background-color: darkgray;
+}
+.top_foot_{
+    height: 60px;
+    padding: 20px 0px;
+}
+.logo img{
+  height: 94px;
+  margin-top: -17px;
+}
+/*搜索*/
+.logo_right{
+    width: 350px;
+    height: 41px;
+    margin:9px 35px;      /*左间距大小*/
+}
+.logo_right td{
+    height: 41px;
+}
+.s_z{           /*图片的定义*/
+    width:4px;
+    background: url("../images/s_l.jpg") no-repeat;  /*不重复*/
+}
+.s_c{
+    width:240px;    /*重复后的宽度*/
+    background: url("../images/s_c.jpg") repeat-x;   /*沿x方向重复*/
+}
+.s_y{
+    width:78px;
+    background: url("../images/s_r.jpg") no-repeat;  /*不重复*/
+}
+.s_c input{                     /*搜索输入框*/
+    width:242px;
+    height: 36px;
+    line-height: 35px;
+    border: none;               
+    margin-top:1px;            
+    font-size:20px;
+    #color: blue;
+}
+.s_y button{                    /*搜索按钮定义*/
+    width: 78px;
+    height: 41px;
+    background: none;           /*自带的背景颜色*/
+    border: 0;                  /*自带的边框*/
+    cursor: pointer;            /*定义的鼠标在此处为手型*/
+}
+.phone{
+    line-height:31px;
+}
+.phone span{
+    font-size: 20px;
+    color: darkred;
+}
+/****************/
+.nav{
+    width: 100%;
+    height: 39px;
+    background:rgb(152,0,0);
+}
+.nav li{
+    list-style: none;
+    float: left;
+    line-height: 35px;
+    padding: 0px 56px;
+    -webkit-transition: all 2s ease; 
+    -moz-transition: all 2s ease; 
+    transition: all 2s ease; 
+    
+}
+.nav li.a , .nav li:hover{
+    height: 39px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 3px rgba(0,0,0,0.5);
+    background:rgba(244,0,0,0.8);
+}
+.nav a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    -webkit-transition: all 1s ease; 
+    -moz-transition: all 1s ease; 
+    transition: all 1s ease; 
+}
+.nav a:hover {
+    color: #f60;
+    font-size: 25px;
+}
+/****************************/
+.jianjie{
+    width: 540px;
+    height: 300px;
+    margin-right: 20px;
+}
+.tit{
+    padding-bottom: 8px;
+    border-bottom: 1px solid darkred;
+    position: relative;
+}
+.tit img {
+  width: 66px;
+  margin-top: 50px;
+}
+.tit span{
+    position: absolute;
+    right:0;
+    bottom: 0;
+}
+.tit a{
+    color: darkred;
+    text-decoration: none;
+
+}
+.xinwen{
+    width: 400px;
+    height: 300px;
+}
+.chanpin{
+    width: 100%;
+    height: 300px;
+}
+
+/**footer**/
+.footer{
+    width: 100%;
+    height: 103px;
+    background: url("../images/footer_bg.jpg") repeat-x;
+
+}
+.footer_top{
+    height: 78px;
+    line-height: 78px;
+}
+.footer_top a{
+    color: #fff;
+    font-size: 25px;
+    margin-right: 20px;
+    text-decoration: none;
+    -webkit-transition: all 1s ease 0s; 
+    -moz-transition: all 1s ease 0s; 
+    transition: all 1s ease 0s; 
+}
+.footer_top a:hover{
+    color: #f60;
+    font-size: 50px;
+    text-shadow: 6px 6px 3px rgba(0,0,0,0.5);
+
+}
+.footer_top span{
+    margin-right: 15px;
+}
+
+.footer_bottom{
+    height: 25px;
+    line-height: 25px;      /*行高*/
+    background: #303030;    /*背景颜色*/
+    color: #d8d8d8;
+}
+.footer_bottom a{
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.footer_bottom a:hover{
+    color: blue;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>视吧慧币这么刷！2.0</title>
+		<style type="text/css">
+			.main{
+				width: 300px;
+				background-color: rgba(2,2,5,0.1);
+			}
+			.B_1{
+				color:darkmagenta ;
+			}
+			.DQX{
+				color: rgba(45,45,45,0.3);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>视吧慧币玩法</h1>
+		<fieldset class="main" >
+			<legend>根据RMB计算</legend>
+			<lable>RMB:</lable>
+			<input class="rmb_1" type="text" placeholder="input RMB"/>
+			<input id="button" type="button" onclick="funRMB()" value="计算慧币数" />
+			<h4>惠币总数：<h2 class="B_1">100</h3></h4>
+		</fieldset>
+		<p> 
+			注：以上是按照8折计算的 
+			<a href="http://www.seedke.com/">点击链接8折惠币网址</a>
+		</p>
+		<p>两人冲相同的币数，互刷到完为止。</p>
+		<script type="text/javascript">
+			var button=document.getElementById('button');
+				button.onchange=funRMB();
+			function funRMB(){ 
+				var rmb=document.getElementsByClassName("rmb_1")[0].value,
+					b=document.getElementsByClassName("B_1")[0];
+				b.textContent=fun(rmb);				
+			}
+			function fun(RMB){
+				var B,sum=0;
+				B=RMB/0.8*10;
+				for(B;B>=1;B*=0.7){ sum+=B; }
+				return Math.floor(sum);
+			}
+		</script>
+		<p class="DQX"> 
+			欢迎交流  
+			<a href="https://github.com/diqiuxin/everydayLifeJS/blob/master/%E5%85%B3%E4%BA%8E%E8%AE%A1%E7%AE%97%E6%83%A0%E5%B8%81%E7%9A%84demo.html">点击查看源代码</a>
+		</p>
+		<p class="DQX"> 如有发现bug请  @地球心  <br>写于：2016/11/某日</p>
+	</body>
+</html>

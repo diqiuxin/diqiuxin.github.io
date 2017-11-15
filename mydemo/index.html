@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+  		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="with=device-with , initial-scale=1">
+		<title>浏览器博物馆</title>
+
+		<link rel="stylesheet" type="text/css" href="./index.css">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<!-- jquery -->
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="./index.jquery.js"></script>
+
+	</head>
+	<body>
+
+		<!-- 导航 -->
+		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container">
+				<!-- 导航条头部名称 -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-navbar">
+						<span class="sr-only"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#" >现代浏览器博物馆</a>
+				</div>
+				<!-- 导航条菜单 -->
+				<div class="collapse navbar-collapse" id="demo-navbar">
+					<ul class="nav navbar-nav">
+						<li class=""><a href="#">简述</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">特点<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#tab-Chrome">Chrome</a></li>
+								<li><a href="#tab-Firefox">Firefox</a></li>
+								<li><a href="#tab-Opera">Opera</a></li>
+								<li><a href="#tab-Safari">Safari</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">官方已停止更新</li>
+								<li><a href="#tab-IE">IE</a></li>
+							</ul>
+						</li>
+
+						<!-- 插入部分 -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">我的其他demo<span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="./index.html">浏览器博物馆</a></li>
+								<li><a href="./pubuliu-js/index.html">瀑布流相册</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">2017年之前的demo</li>
+								<li><a href="./everydayJS/化工原理课设计算.html">化工原理课设计算</a></li>
+								<li><a href="./everydayJS/汉得逻辑数字计算.html">汉得逻辑数字计算</a></li>
+								<li><a href="./everydayJS/视吧惠币计算.html">惠币计算（一种平台的金币）</a></li>
+								<li><a href="./bishe/index.html">帮别人做的毕设展示框架</a></li>
+							</ul>
+						</li>
+						<li class=""><a href="../jianli/index.html">我的简历</a></li>
+						<!-- 插入部分 -->
+						<li class=""><a href="#" data-toggle="modal" data-target="#about-modal">关于</a></li>
+					</ul>
+				</div>
+				<!-- 导航条菜单 /div -->
+			</div>
+		</nav>
+		<!-- //////////////////////////////////////////////////////////ifor/////////////////////////////////////////////////////////////// -->
+		<!-- 轮番图 -->
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- 底部导航点 -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+			</ol>
+			<!-- 图片显示区 -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/chrome-big.jpg" alt="0 slide">
+					<div class="carousel-caption">
+						<h1>Chrome</h1>
+						<p>Google Chrome是由Google开发的一款设计简单、高效的Web浏览工具。</p>
+						<p><a class="btn btn-lg btn-primary" href="https://www.baidu.com/link?url=GWf6qiskHV_Q5VeeCZpjp3QaZ_VizyInOHUU2xIsTBDHFbBn9yv48MQuWwHeR7KiZUrN9y9fC4uKpRz8G_2HBEhozQX3sliLVoH-Z1snUWm&wd=&eqid=da800712000457800000000359902297" target="_blank" role="button">点我下载</a></p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/firefox-big.jpg" alt="1 slide">
+					<div class="carousel-caption">
+						<h1>Firefox</h1>
+						<p>Mozilla Firefox，中文俗称“火狐”，是一个自由及开放源代码网页浏览器。</p>
+						<p><a class="btn btn-lg btn-primary" href="https://www.baidu.com/link?url=ihpPfN1QX4lZ2WZDSfMyWqhOKfhO3PcOEu5G7NNe9RJ3L74n4AxakFb7B027aT9f9exDdtE5-0eM6JFIhJdIi71SeaOUKGxt0bS4eOtMP6u&wd=&eqid=ef379d9b0003e6e10000000359902324" target="_blank" role="button">点我下载</a></p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/opera-big.jpg" alt="2 slide">
+					<div class="carousel-caption">
+						<h1>Opera</h1>
+						<p>pera浏览器，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。</p>
+						<p><a class="btn btn-lg btn-primary" href="https://www.baidu.com/link?url=DJINIU2GUxGz_R0dbM64JV6t7jXJT-Ugh6Kz79eFXFh3QMv2zyePC8iI8ZsbHTJpAkJVTyk1P-beuzw3vsoE1CwWOkeb1hv0t9EABxF3h4y&wd=&eqid=ea97412d0003af3000000003599023a2" target="_blank" role="button">点我下载</a></p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/safari-big.jpg" alt="3 slide">
+					<div class="carousel-caption">
+						<h1>Safari</h1>
+						<p>Safari，是苹果计算机的操作系统Mac OS中的浏览器。</p>
+						<p><a class="btn btn-lg btn-primary" href="https://www.baidu.com/link?url=xAxnce9BI4nlYY6HMO0ugtlx4RgF_gE8WYPCQfdgyd4uAl5eqeYTPRvLbuwtozta0s8Ht_fAevh5QhRPMg6bA88fP_PKTXOtFTDVJXtClia&wd=&eqid=c45808730003ad85000000035990238c" target="_blank" role="button">点我下载</a></p>
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/ie-big.jpg" alt="4 slide">
+					<div class="carousel-caption">
+						<h1>IE</h1>
+						<p>Internet Explorer，是微软公司推出的一款网页浏览器。</p>
+						<p><a class="btn btn-lg btn-primary" href="https://www.baidu.com/link?url=Kgdsbh-3tu8Y9y8u5Mz9MnMVZutDyjJigxtj5uaeKwAN_qP1fZnZMDuHNq4mUqUXZGFCZ-201BXIs5qSi6kMqqwZIPvniX6oqnEFK7kv4mi&wd=&eqid=dac8d1da0003a0ae00000003599023bd" target="_blank" role="button">点我下载</a></p>
+					</div>
+				</div>
+
+
+			</div>
+			<!-- 两侧导航 -->
+			<a href="#carousel-example-generic" class="left carousel-control" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">上一页</span>
+			</a>
+			<a href="#carousel-example-generic" class="right carousel-control" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">下一页</span>
+			</a>
+		</div>
+
+		<!-- 简介 -->
+		<div class="container" id="summary-container">
+			<div class="row">
+				<div class="col-md-4">
+					<img class="img-cricle" src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/chrome-logo-small.jpg" alt="chrome">
+					<h2>Chrome</h2>
+					<p>Google Chrome是由Google开发的一款设计简单、高效的Web浏览工具。</p>
+					<p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+				</div>
+
+				<div class="col-md-4">
+					<img class="img-cricle" src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/firefox-logo-small.jpg" alt="Firefox">
+					<h2>Firefox</h2>
+					<p>Mozilla Firefox，中文俗称“火狐”，是一个自由及开放源代码网页浏览器。</p>
+					<p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+				</div>
+
+				<div class="col-md-4">
+					<img class="img-cricle" src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/safari-logo-small.jpg" alt="Safari">
+					<h2>Safari</h2>
+					<p>Safari，是苹果计算机的操作系统Mac OS中的浏览器。</p>
+					<p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+				</div>
+			</div>
+			<hr class="divider">
+		</div>
+
+		<!-- 标签页 -->
+		<div class="container">
+		<ul class="nav nav-tabs" role="tablist" id="tab-list">
+			<li class="active"><a href="#tab-Chrome" role="tab" data-toggle="tab">Chrome</a></li>
+			<li><a href="#tab-Firefox" role="tab" data-toggle="tab">Firefox</a></li>
+			<li><a href="#tab-Opera" role="tab" data-toggle="tab">Opera</a></li>
+			<li><a href="#tab-Safari" role="tab" data-toggle="tab">Safari</a></li>
+			<li><a href="#tab-IE" role="tab" data-toggle="tab">IE</a></li>
+		</ul>
+		<!-- 标签页的内容 -->
+		<div class="tab-content">
+
+			<div class="tab-pane active" id="tab-Chrome">
+				<div class="row feature">
+					<div class="col-md-5">
+						<img class="feature-image img-responsive" src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/chrome-logo.jpg" alt="chrome">
+					</div>
+					<div class="col-md-7">
+						<h1 class="feature-heading"> Chrome <span class="text-muted">使用最广的浏览器</span></h1>
+						<p class="lead">Google Chrome是一款由Google公司开发的网页浏览器，该浏览器基于其他开源软件撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="tab-pane" id="tab-Firefox">
+				<div class="row feature">
+					<div class="col-md-7">
+						<h1 class="feature-heading"> Firefox <span class="text-muted">美丽的狐狸</span></h1>
+						<p class="lead">Mozilla Firefox，中文俗称“火狐”（正式缩写为Fx或fx，非正式缩写为FF），是一个自由及开放源代码网页浏览器，使用Gecko排版引擎，支持多种操作系统，如Windows、Mac OS X及GNU/Linux等。该浏览器提供了两种版本，普通版和ESR（Extended Support Release，延长支持）版，ESR版本是 Mozilla 专门为那些无法或不愿每隔六周就升级一次的企业打造。Firefox ESR 版的升级周期为 42 周，而普通 Firefox 的升级周期为 6 周。</p>
+					</div>
+					<div class="col-md-5">
+						<img class="feature-image img-responsive" src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/firefox-logo.jpg" alt="Firefox">
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane" id="tab-Opera">
+				<div class="row feature">
+					<div class="col-md-5">
+						<img class="feature-image img-responsive" src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/opera-logo.jpg" alt="Opera">
+					</div>
+					<div class="col-md-7">
+						<h1 class="feature-heading"> Opera <span class="text-muted">小众但易用</span></h1>
+						<p class="lead">Opera浏览器因为它的快速、小巧和比其他浏览器更佳的
+						标准兼容性获得了国际上的最终用户和业界媒体的承认，并在网上受到很多人的推崇。OperaSoftware开发的Opera浏览器是一款适用于各种平台、操作系统和嵌入式网络产品的高品质、多平台产品</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane" id="tab-Safari">
+				<div class="row feature">
+					<div class="col-md-7">
+						<h1 class="feature-heading"> Safari <span class="text-muted">Mac用户首选</span></h1>
+						<p class="lead">Safari，是苹果计算机的操作系统Mac OS中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari 是一款浏览器、一个平台，也是对锐意创新的公开邀请。无论在 Mac、PC 或 iPod touch 上运行，Safari 都可提供极致愉悦的网络体验方式，更不断地改写浏览器的定义。</p>
+					</div>
+					<div class="col-md-5">
+						<img class="feature-image img-responsive" src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/safari-logo.jpg" alt="Safari">
+					</div>
+			</div>
+			</div>
+
+			<div class="tab-pane" id="tab-IE">
+				<div class="row feature">
+					<div class="col-md-5">
+						<img class="feature-image img-responsive" src="http://oneh699vx.bkt.clouddn.com/luiLanQi/image/ie-logo.jpg" alt="IE">
+					</div>
+					<div class="col-md-7">
+						<h1 class="feature-heading"> IE  <span class="text-muted">就像你知道的那样</span></h1>
+						<p class="lead">Internet Explorer，是微软公司推出的一款网页浏览器。原称Microsoft Internet Explorer(6版本以前)和Windows Internet Explorer(7、8、9、10、11版本)，简称IE。在IE7以前，中文直译为“网络探路者”，但在IE7以后官方便直接俗称"IE浏览器"。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 标签页完成 -->
+
+		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+		<!-- 16:9 aspect ratio -->
+		<!-- <div class="container">
+			<div class="embed-responsive embed-responsive-16by9">
+			  <iframe class="embed-responsive-item" name="iframeName">
+			  </iframe>
+			</div>
+		</div> -->
+		<!-- 16:9 aspect ratio -->
+
+
+		<hr class="divider">
+
+
+
+		<!-- 底部信息 -->
+		<footer>
+			<p class="pull-right"><a href="#top">回到顶部</a></p>
+			<p><span class="glyphicon glyphicon-home" aria-hidden="true"> </span><a href="http://www.diqiuxin.top"> © 2017 地球心</a></p>
+		</footer>
+
+
+
+
+
+		<!-- 弹出框 -->
+		<div class="modal fade" id="about-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">关于</h4>
+					</div>
+					<div class="modal-body">
+						<p>我是前端编程爱好者，浏览器是的一个很好的展示工具。</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</b utton>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jquery js  暂时弃用 -->
+		<!-- <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
+		<!-- Bootstrap js -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
