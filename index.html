@@ -169,6 +169,109 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-VMware Workstation 黑屏解决方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/16/VMware Workstation 黑屏解决方案/">VMware Workstation 黑屏解决方案</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/16/VMware Workstation 黑屏解决方案/" class="archive-article-date">
+  	<time datetime="2017-11-16T08:35:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="VMware-Workstation-14-Pro-安装系统时黑屏解决方案"><a href="#VMware-Workstation-14-Pro-安装系统时黑屏解决方案" class="headerlink" title="VMware Workstation 14 Pro 安装系统时黑屏解决方案"></a>VMware Workstation 14 Pro 安装系统时黑屏解决方案</h4><blockquote>
+<p>首先我电脑本身的系统是 Windows 10 ，在装 VMware Workstation 14 Pro 时出现黑屏，试了好多方法，还卸掉了鲁大师（最后发现鲁大师好像挺冤枉的）。</p>
+</blockquote>
+<p>我在 VMware 上安装的是 deepin（也是linux） 系统，其实我试了好多的系统，都会出现黑屏的。</p>
+<h2 id="实际的解决方法-在才是重点-："><a href="#实际的解决方法-在才是重点-：" class="headerlink" title="实际的解决方法(在才是重点)："></a>实际的解决方法(在才是重点)：</h2><p>首先要明确是什么原因导致的黑屏：</p>
+<ol>
+<li><p>如果是 VMware Workstation 软件本身没有安装好，建议重装此软件。（一般这种可能性是很低的）</p>
+</li>
+<li><p>再者就是 LSP 出错了，解决办法很简单(有两种)：</p>
+<ul>
+<li><p>第一种：以管理员的身份运行 windows 的命令窗口，然后输入命令：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh winsock reset</span><br></pre></td></tr></table></figure>
+<p>  然后重启电脑，重新打开虚拟机。</p>
+</li>
+<li>第二种：以管理员的身份运行 windows 的命令窗口，然后输入命令：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">netsh winsock reset</span><br><span class="line">net stop VMAuthdService</span><br><span class="line">net start VMAuthdService</span><br><span class="line">net stop VMwateHostd</span><br><span class="line">net start VMwateHostd</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="感兴趣的话可以看看"><a href="#感兴趣的话可以看看" class="headerlink" title="感兴趣的话可以看看"></a>感兴趣的话可以看看</h3><p>其实出现黑屏的原因不是 VMware Workstation 上的系统没有运行。如果细心地话你会发现自己电脑的内存已经被虚拟机的系统占用了一步分了，而且在你挂载系统时你会发现黑屏会在一瞬间闪出一个不是黑屏的界面（其实那是系统的安装启动界面）然后又消失了。</p>
+<p>真正的原因是系统的安装启动界面已经准备就绪了，只是 VMware Workstation 不能正常的显示出来而已。（显示通信上出问题了） 我们所做的就是把 VMware Workstation 的 LSP 重置了一下，然后重新打开而已。</p>
+<p>其实问题本身不难解决，只是很多时候我们不清楚问题出在了哪里。</p>
+<p><strong>希望我的这两个解决办法对你有用。</strong></p>
+<blockquote>
+<p>写于：2017/11/16 17:00</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">黑屏解决方案</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">VMware Workstation</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/16/VMware Workstation 黑屏解决方案/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-如何使用 Hexo 搭建了你的博客系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1061,140 +1164,6 @@
 
 
   
-    <article id="post-异步JS请求（AJAX与XHR）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/29/异步JS请求（AJAX与XHR）/">异步JS请求（AJAX与XHR）</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/29/异步JS请求（AJAX与XHR）/" class="archive-article-date">
-  	<time datetime="2017-10-29T07:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>主要内容</strong></p>
-<ol>
-<li>xhr的基本使用<ul>
-<li>.open()</li>
-<li>.send()</li>
-<li>.onload()  请求成功时的处理</li>
-<li>.onerror()  请求失败是的处理</li>
-<li>xhr的完整请求</li>
-</ul>
-</li>
-<li>xhr用法回顾</li>
-</ol>
-<h4 id="xhr的基本使用"><a href="#xhr的基本使用" class="headerlink" title="xhr的基本使用"></a>xhr的基本使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&apos;GET&apos;,&apos;https://www.diqiuxin.top/&apos;);</span><br></pre></td></tr></table></figure>
-<p><strong>.open()常用的两种方法</strong></p>
-<ul>
-<li>GET - 检索数据</li>
-<li>POST - 发送数据</li>
-</ul>
-<p>.open()的第三参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&apos;GET&apos;,&apos;https://www.diqiuxin.top/&apos;,false);</span><br></pre></td></tr></table></figure></p>
-<p>将 false 传递为第三个参数使 XHR 请求变成非异步请求。这将导致 JavaScript 引擎暂停并等待返回该请求，然后再继续。这种“暂停并等待”也称为“阻止”。</p>
-<p>这是种很糟糕的做法，完全与异步行为的目的相违背。请勿如此设置你的 XHR 对象！要么将第三个参数设为 true 或留空（默认第变成 true）。</p>
-<p><strong>.send()</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&apos;GET&apos;,&apos;https://www.diqiuxin.top/&apos;);</span><br><span class="line">xhr.send();  </span><br><span class="line">//返回：undefined</span><br></pre></td></tr></table></figure></p>
-<p>内容发送后，没有做任何处理，就只会返回undefined。</p>
-<p><strong>.onload 请求成功时的处理</strong></p>
-<p>要处理 XHR 请求的成功响应，我们将对象上的 onload 属性设为将处理它的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> function handleSuccess() &#123;</span><br><span class="line">    // in the function, the `this` value is the XHR object</span><br><span class="line">    // this.responseText holds the response from the server</span><br><span class="line"></span><br><span class="line">    console.log(this.responseText); // the HTML of https://unsplash.com/</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">xhr.onload = handleSuccess;</span><br></pre></td></tr></table></figure></p>
-<p>如果未设置 onload，则请求的确会返回（undefined），但是它什么也不会发生。</p>
-<p><strong>.onerror 请求出现错误时的处理</strong></p>
-<p>如果请求成功，则调用 onload。如果请求出现问题，无法实现请求，则我们需要使用 onerror 属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function handleError () &#123;</span><br><span class="line">    // in the function, the `this` value is the XHR object</span><br><span class="line">    console.log( &apos;An error occurred 😞&apos; );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">xhr.onerror = handleError;</span><br></pre></td></tr></table></figure></p>
-<p>和 onload 一样，如果 onerror 未设置，并且出现错误，则该错误将继续发生，但是没有任何提示，代码（以及用户）将不知道发生了什么问题，也不知道如何恢复。</p>
-<p><strong>完整的请求</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">const searchedForText = &apos;hippos&apos;;</span><br><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">xhr.open(&apos;GET&apos;, `https://api.unsplash.com/search/photos?page=1&amp;query=$&#123;searchedForText&#125;`);</span><br><span class="line">xhr.onload = addImage;</span><br><span class="line">xhr.onerror = handleError;</span><br><span class="line">xhr.setRequestHeader(&apos;Authorization&apos;, &apos;Client-ID &lt;your-client-id&gt;&apos;);</span><br><span class="line">xhr.send();</span><br><span class="line"></span><br><span class="line">function addImage()&#123;</span><br><span class="line">    let htmlContent = &apos;&apos;;</span><br><span class="line">    const data = JSON.parse(this.responseText);</span><br><span class="line">    </span><br><span class="line">    if (data &amp;&amp; data.results &amp;&amp; data.results[0]) &#123;</span><br><span class="line">        comst firsImage = data.results[0];</span><br><span class="line">        htmlContent = `&lt;figure&gt;</span><br><span class="line">            &lt;img src=&quot;$&#123;firstImage.urls.regular&#125;&quot; alt=&quot;$&#123;searchedForText&#125;&quot;&gt;</span><br><span class="line">            &lt;figcaption&gt;$&#123;searchedForText&#125; by $&#123;firstImage.user.name&#125;&lt;/figcaption&gt;</span><br><span class="line">        &lt;/figure&gt;`;</span><br><span class="line">    &#125; else &#123;  //请求失败时的情况</span><br><span class="line">        htmlContent = `&lt;div class=&quot;reeor-no-image&quot;&gt;No images available&lt;/div&gt;`;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    responseContainer.insertAdjacentHTML(&apos;afterbegin&apos;,htmlContent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在向 API 发出请求并返回 JSON 时，我们只需将该 JSON 响应转换为 JavaScript 对象。为此，我们可以使用 JSON.parse();。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function handleSuccess () &#123;</span><br><span class="line">const data = JSON.parse( this.responseText ); // convert data from JSON to a JavaScript object</span><br><span class="line">console.log( data );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">xhr.onload = handleSuccess;</span><br></pre></td></tr></table></figure></p>
-<h4 id="XHR-用法回顾"><a href="#XHR-用法回顾" class="headerlink" title="XHR 用法回顾"></a>XHR 用法回顾</h4><p><strong>要发出异步请求</strong></p>
-<ul>
-<li>使用 XMLHttpRequest 构造函数创建 XHR 对象</li>
-<li>使用 .open() 方法 - 设置 HTTP 方法和要获取的资源的 URL</li>
-<li>设置 .onload 属性 - 将此属性设为成功获取数据后将运行的函数</li>
-<li>设置 .onerror 属性 - 将此属性设为出现错误后将运行的函数</li>
-<li>使用 .send() 方法 - 发送请求</li>
-</ul>
-<p><strong>要使用响应</strong></p>
-<ul>
-<li>使用 .responseText 属性 - 存储异步请求响应的文本</li>
-</ul>
-<hr>
-<p><strong>案例：GET(来自MDN)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&apos;GET&apos;, &apos;/server&apos;, true);</span><br><span class="line"></span><br><span class="line">xhr.onload = function () &#123;</span><br><span class="line">   // 请求结束后,在此处写处理代码</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xhr.send(null);</span><br><span class="line">// xhr.send(&apos;string&apos;);</span><br><span class="line">// xhr.send(new Blob());</span><br><span class="line">// xhr.send(new Int8Array());</span><br><span class="line">// xhr.send(&#123; form: &apos;data&apos; &#125;);</span><br><span class="line">// xhr.send(document);</span><br></pre></td></tr></table></figure></p>
-<p><strong>案例: POST(来自MDN)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&quot;POST&quot;, &apos;/server&apos;, true);</span><br><span class="line"></span><br><span class="line">//发送合适的请求头信息</span><br><span class="line">xhr.setRequestHeader(&quot;Content-type&quot;, &quot;application/x-www-form-urlencoded&quot;);</span><br><span class="line"></span><br><span class="line">xhr.onreadystatechange = function() &#123;//Call a function when the state changes.</span><br><span class="line">    if(xhr.readyState == XMLHttpRequest.DONE &amp;&amp; xhr.status == 200) &#123;</span><br><span class="line">        // 请求结束后,在此处写处理代码</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">xhr.send(&quot;foo=bar&amp;lorem=ipsum&quot;); </span><br><span class="line">// xhr.send(&apos;string&apos;); </span><br><span class="line">// xhr.send(new Blob()); </span><br><span class="line">// xhr.send(new Int8Array()); </span><br><span class="line">// xhr.send(&#123; form: &apos;data&apos; &#125;); </span><br><span class="line">// xhr.send(document);</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>写于：2017/10/29 18:50<br>等待后继更新</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">异步JS请求</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AjAX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XHR</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/29/异步JS请求（AJAX与XHR）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-AJAX与XHR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1329,171 +1298,74 @@
 
 
   
-    <article id="post-JS-ES6 新特性(内置方法--2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-异步JS请求（AJAX与XHR）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/28/JS-ES6 新特性(内置方法--2)/">JS-ES6 新特性（内置方法--2）</a>
+      <a class="article-title" href="/2017/10/29/异步JS请求（AJAX与XHR）/">异步JS请求（AJAX与XHR）</a>
     </h1>
   
 
         
-        <a href="/2017/10/28/JS-ES6 新特性(内置方法--2)/" class="archive-article-date">
-  	<time datetime="2017-10-28T08:40:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-28</time>
+        <a href="/2017/10/29/异步JS请求（AJAX与XHR）/" class="archive-article-date">
+  	<time datetime="2017-10-29T07:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>具体的内容包括：</strong></p>
+        <p><strong>主要内容</strong></p>
 <ol>
-<li>Promise 的介绍与使用</li>
-<li>Proxy的介绍与使用</li>
-<li>生成器</li>
-<li>生成器与迭代器</li>
+<li>xhr的基本使用<ul>
+<li>.open()</li>
+<li>.send()</li>
+<li>.onload()  请求成功时的处理</li>
+<li>.onerror()  请求失败是的处理</li>
+<li>xhr的完整请求</li>
+</ul>
+</li>
+<li>xhr用法回顾</li>
 </ol>
-<h4 id="1-Promise-的介绍与使用"><a href="#1-Promise-的介绍与使用" class="headerlink" title="1. Promise 的介绍与使用"></a>1. Promise 的介绍与使用</h4><blockquote>
-<p>关于对Promise的介绍，<a href="https://segmentfault.com/a/1190000002928371" target="_blank" rel="external">强烈推荐链接</a>。（这是看过的对Promise解释的最通俗易懂的了）</p>
-</blockquote>
-<p><strong>什么是异步回调</strong></p>
-<p>Promise对象用于异步操作，它表示一个尚未完成且预计在未来完成的异步操作。</p>
-<p>提起异步，就不得不谈谈回调函数了。上例中，setTimeout里的function便是回调函数。可以简单理解为：（执行完）回（来）调（用）的函数。</p>
-<p>可以看出，回调函数是一段可执行的代码段，它以「参数」的形式传递给其他代码，在其合适的时间执行这段（回调函数）的代码。</p>
-<p>也就是说，回调函数不仅可以用于异步调用，一般同步的场景也可以用回调。</p>
-<blockquote>
-<p>在同步调用下，回调函数一般是最后执行的。而异步调用下，可能一段时间后执行或不执行（未达到执行的条件）。 setTimeout就是常见的异步回调，另外常见的异步回调即ajax请求。   </p>
-</blockquote>
-<p><strong>Promise的三种状态</strong></p>
-<p>Promise对象代表一个未完成、但预计将来会完成的操作。</p>
-<p>三种状态：</p>
+<h4 id="xhr的基本使用"><a href="#xhr的基本使用" class="headerlink" title="xhr的基本使用"></a>xhr的基本使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&apos;GET&apos;,&apos;https://www.diqiuxin.top/&apos;);</span><br></pre></td></tr></table></figure>
+<p><strong>.open()常用的两种方法</strong></p>
 <ul>
-<li>pending：初始值，不是fulfilled，也不是rejected</li>
-<li>fulfilled：代表操作成功</li>
-<li>rejected：代表操作失败</li>
+<li>GET - 检索数据</li>
+<li>POST - 发送数据</li>
 </ul>
-<p>Promise有两种状态改变的方式，既可以从pending转变为fulfilled，也可以从pending转变为rejected。一旦状态改变，就「凝固」了，会一直保持这个状态，不会再发生变化。当状态发生变化，promise.then绑定的函数就会被调用。</p>
-<p>注意：Promise一旦新建就会「立即执行」，无法取消。这也是它的缺点之一。</p>
-<p><strong>为什么要使用Promise呢？</strong></p>
-<p>原因:在往常的异步操作中往往会产生一种多层回调嵌套（就是用上一次请求反回的结果作为下一次的请求的参数再次请求，当这种情况连续出现时产生的就是多层回调嵌套），由于这种嵌套非常容易一出错。 而Promise中的异步操作会提供一个 .then()的方法通过链式回调来解决这种多层回调嵌套的情况。</p>
-<p>JavaScript Promise 是用新的 Promise 构造函数 - new Promise() 创建而成的。promise 使你能够展开一些可以异步完成的工作，并回到常规工作。创建 promise 时，必须向其提供异步运行的代码。将该代码当做参数提供给构造函数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">new Promise(function () &#123;</span><br><span class="line">    window.setTimeout(function createSundae(flavor = &apos;chocolate&apos;) &#123;</span><br><span class="line">        const sundae = &#123;&#125;;</span><br><span class="line">        // request ice cream</span><br><span class="line">        // get cone</span><br><span class="line">        // warm up ice cream scoop</span><br><span class="line">        // scoop generous portion into cone!</span><br><span class="line">    &#125;, Math.random() * 2000);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><strong>指示一个成功请求或者失败请求</strong></p>
-<p>但是完成这一切后，JavaScript 如何通知我们它已经完成操作，准备好让我们恢复工作？它通过向初始函数中传入两个函数来实现这一点，通常我们将这两个函数称为 resolve（成功） 和 reject（失败）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">new Promise(function (resolve, reject) &#123;</span><br><span class="line">    window.setTimeout(function createSundae(flavor = &apos;chocolate&apos;) &#123;</span><br><span class="line">        const sundae = &#123;&#125;;</span><br><span class="line">        // request ice cream</span><br><span class="line">        // get cone</span><br><span class="line">        // warm up ice cream scoop</span><br><span class="line">        // scoop generous portion into cone!</span><br><span class="line">        resolve(sundae);</span><br><span class="line">    &#125;, Math.random() * 2000);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>当 sundae 被成功创建后，它会调用 resolve 方法并向其传递我们要返回的数据，在本例中，返回的数据是完成的 sundae。因此 resolve 方法用来表示请求已完成，并且成功完成了请求。</p>
-<p>如果请求存在问题，无法完成请求，那么我们可以使用传递给该函数的第二个函数。通常，该函数存储在一个叫做”reject”的标识符中，表示如果请求因为某种原因失败了，应该使用该函数。请看看第一行的 reject：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">new Promise(function (resolve, reject) &#123;</span><br><span class="line">    window.setTimeout(function createSundae(flavor = &apos;chocolate&apos;) &#123;</span><br><span class="line">        const sundae = &#123;&#125;;</span><br><span class="line">        // request ice cream</span><br><span class="line">        // get cone</span><br><span class="line">        // warm up ice cream scoop</span><br><span class="line">        // scoop generous portion into cone!</span><br><span class="line">        if ( /* iceCreamConeIsEmpty(flavor) */ ) &#123;</span><br><span class="line">            reject(`Sorry, we&apos;re out of that flavor :-(`);</span><br><span class="line">        &#125;</span><br><span class="line">        resolve(sundae);</span><br><span class="line">    &#125;, Math.random() * 2000);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>如果请求无法完成，则使用 reject 方法。注意，即使请求失败了，我们依然可以返回数据，在本例中，我们只是返回了一段文字，表示没有我们想要的冰激凌口味。</p>
-<p>Promise构造函数需要一个可以运行的函数，运行一段时间后，将成功完成（使用 resolve 方法）或失败（使用 reject 方法）。当结果最终确定时（请求成功完成或失败），现在 promise 已经实现了，并且将通知我们，这样我们便能决定将如何对结果做处理。</p>
-<p><strong>Promise 立即返回对象</strong></p>
-<p>首先要注意的是，Promise 将立即返回一个对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const myPromiseObj = new Promise(function (resolve, reject) &#123;</span><br><span class="line">    // sundae creation code</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>该对象上具有一个 .then() 方法，我们可以让该方法通知我们 promise 中的请求成功与否。.then() 方法会接收两个函数：</p>
+<p>.open()的第三参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&apos;GET&apos;,&apos;https://www.diqiuxin.top/&apos;,false);</span><br></pre></td></tr></table></figure></p>
+<p>将 false 传递为第三个参数使 XHR 请求变成非异步请求。这将导致 JavaScript 引擎暂停并等待返回该请求，然后再继续。这种“暂停并等待”也称为“阻止”。</p>
+<p>这是种很糟糕的做法，完全与异步行为的目的相违背。请勿如此设置你的 XHR 对象！要么将第三个参数设为 true 或留空（默认第变成 true）。</p>
+<p><strong>.send()</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&apos;GET&apos;,&apos;https://www.diqiuxin.top/&apos;);</span><br><span class="line">xhr.send();  </span><br><span class="line">//返回：undefined</span><br></pre></td></tr></table></figure></p>
+<p>内容发送后，没有做任何处理，就只会返回undefined。</p>
+<p><strong>.onload 请求成功时的处理</strong></p>
+<p>要处理 XHR 请求的成功响应，我们将对象上的 onload 属性设为将处理它的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> function handleSuccess() &#123;</span><br><span class="line">    // in the function, the `this` value is the XHR object</span><br><span class="line">    // this.responseText holds the response from the server</span><br><span class="line"></span><br><span class="line">    console.log(this.responseText); // the HTML of https://unsplash.com/</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">xhr.onload = handleSuccess;</span><br></pre></td></tr></table></figure></p>
+<p>如果未设置 onload，则请求的确会返回（undefined），但是它什么也不会发生。</p>
+<p><strong>.onerror 请求出现错误时的处理</strong></p>
+<p>如果请求成功，则调用 onload。如果请求出现问题，无法实现请求，则我们需要使用 onerror 属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function handleError () &#123;</span><br><span class="line">    // in the function, the `this` value is the XHR object</span><br><span class="line">    console.log( &apos;An error occurred 😞&apos; );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">xhr.onerror = handleError;</span><br></pre></td></tr></table></figure></p>
+<p>和 onload 一样，如果 onerror 未设置，并且出现错误，则该错误将继续发生，但是没有任何提示，代码（以及用户）将不知道发生了什么问题，也不知道如何恢复。</p>
+<p><strong>完整的请求</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">const searchedForText = &apos;hippos&apos;;</span><br><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">xhr.open(&apos;GET&apos;, `https://api.unsplash.com/search/photos?page=1&amp;query=$&#123;searchedForText&#125;`);</span><br><span class="line">xhr.onload = addImage;</span><br><span class="line">xhr.onerror = handleError;</span><br><span class="line">xhr.setRequestHeader(&apos;Authorization&apos;, &apos;Client-ID &lt;your-client-id&gt;&apos;);</span><br><span class="line">xhr.send();</span><br><span class="line"></span><br><span class="line">function addImage()&#123;</span><br><span class="line">    let htmlContent = &apos;&apos;;</span><br><span class="line">    const data = JSON.parse(this.responseText);</span><br><span class="line">    </span><br><span class="line">    if (data &amp;&amp; data.results &amp;&amp; data.results[0]) &#123;</span><br><span class="line">        comst firsImage = data.results[0];</span><br><span class="line">        htmlContent = `&lt;figure&gt;</span><br><span class="line">            &lt;img src=&quot;$&#123;firstImage.urls.regular&#125;&quot; alt=&quot;$&#123;searchedForText&#125;&quot;&gt;</span><br><span class="line">            &lt;figcaption&gt;$&#123;searchedForText&#125; by $&#123;firstImage.user.name&#125;&lt;/figcaption&gt;</span><br><span class="line">        &lt;/figure&gt;`;</span><br><span class="line">    &#125; else &#123;  //请求失败时的情况</span><br><span class="line">        htmlContent = `&lt;div class=&quot;reeor-no-image&quot;&gt;No images available&lt;/div&gt;`;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    responseContainer.insertAdjacentHTML(&apos;afterbegin&apos;,htmlContent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在向 API 发出请求并返回 JSON 时，我们只需将该 JSON 响应转换为 JavaScript 对象。为此，我们可以使用 JSON.parse();。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function handleSuccess () &#123;</span><br><span class="line">const data = JSON.parse( this.responseText ); // convert data from JSON to a JavaScript object</span><br><span class="line">console.log( data );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">xhr.onload = handleSuccess;</span><br></pre></td></tr></table></figure></p>
+<h4 id="XHR-用法回顾"><a href="#XHR-用法回顾" class="headerlink" title="XHR 用法回顾"></a>XHR 用法回顾</h4><p><strong>要发出异步请求</strong></p>
 <ul>
-<li>请求成功完成时要运行的函数</li>
-<li>请求失败时要运行的函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mySundae.then(function(sundae) &#123;</span><br><span class="line">    console.log(`Time to eat my delicious $&#123;sundae&#125;`);</span><br><span class="line">&#125;, function(msg) &#123;</span><br><span class="line">    console.log(msg);</span><br><span class="line">    self.goCry(); // not a real method</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</li>
+<li>使用 XMLHttpRequest 构造函数创建 XHR 对象</li>
+<li>使用 .open() 方法 - 设置 HTTP 方法和要获取的资源的 URL</li>
+<li>设置 .onload 属性 - 将此属性设为成功获取数据后将运行的函数</li>
+<li>设置 .onerror 属性 - 将此属性设为出现错误后将运行的函数</li>
+<li>使用 .send() 方法 - 发送请求</li>
 </ul>
-<p>可以看出，传递给 .then() 的第一个函数将被调用，并传入 Promise 的 resolve 函数需要使用的数据。这里，该函数将接收 sundae 对象。第二个函数传入的数据会在 Promise 的 reject 函数被调用时使用。这里，该函数收到错误消息”Sorry, we’re out of that flavor :-(“，在上述 Promise 代码中，reject 函数被调用。</p>
-<p><strong>Promise的API的使用</strong></p>
-<p><a href="https://segmentfault.com/a/1190000007032448#articleHeader10" target="_blank" rel="external">强烈推荐链接</a></p>
-<h4 id="2-Proxy的介绍与使用"><a href="#2-Proxy的介绍与使用" class="headerlink" title="2. Proxy的介绍与使用"></a>2. Proxy的介绍与使用</h4><p>要创建 Proxy（代理）对象，我们使用 Proxy 构造函数 new Proxy();。Proxy 构造函数接收两个项目：</p>
+<p><strong>要使用响应</strong></p>
 <ul>
-<li>它将要代理的对象</li>
-<li>包含将为被代理对象处理的方法列表的对象</li>
+<li>使用 .responseText 属性 - 存储异步请求响应的文本</li>
 </ul>
-<p>第二个对象叫做处理器.</p>
-<p>创建 Proxy 的最简单方式是提供对象和空的 handler（处理器）对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var richard = &#123;status: &apos;looking for work&apos;&#125;;</span><br><span class="line">var agent = new Proxy(richard, &#123;&#125;);</span><br><span class="line"></span><br><span class="line">agent.status; // returns &apos;looking for work&apos;</span><br></pre></td></tr></table></figure></p>
-<p>让 Proxy 变得有用的关键是当做第二个对象传递给 Proxy 构造函数的 handler 对象。handler 对象由将用于访问属性的方法构成。我们看看 get：</p>
-<p><strong>Get Trap（捕获器）</strong></p>
-<p>get 用来截获对属性的调用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const richard = &#123;status: &apos;looking for work&apos;&#125;;</span><br><span class="line">const handler = &#123;</span><br><span class="line">    get(target, propName) &#123;</span><br><span class="line">        console.log(target); // the `richard` object, not `handler` and not `agent`</span><br><span class="line">        console.log(propName); // the name of the property the proxy (`agent` in this case) is checking</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">const agent = new Proxy(richard, handler);</span><br><span class="line">agent.status; // logs out the richard object (not the agent object!) and the name of the property being accessed (`status`)</span><br></pre></td></tr></table></figure></p>
-<p>在上述代码中，handler 对象具有一个 get 方法（因为被用在 Proxy 中，所以将”function”（方法）称之为”trap”（捕获器））。当代码 agent.status; 在最后一行运行时，因为存在 get 捕获器，它将截获该调用以获得 status（状态）属性并运行 get 捕获器方法。这样将会输出 Proxy 的目标对象（richard 对象），然后输出被请求的属性（status 属性）的名称。它的作用就是这些！它不会实际地输出属性！这很重要 —— 如果使用了捕获器，你需要确保为该捕获器提供所有的功能。</p>
-<p><strong>从 Proxy 内部访问目标对象</strong></p>
-<p>如果我们想真正地提供真实的结果，我们需要返回目标对象的属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const richard = &#123;status: &apos;looking for work&apos;&#125;;</span><br><span class="line">const handler = &#123;</span><br><span class="line">    get(target, propName) &#123;</span><br><span class="line">        console.log(target);</span><br><span class="line">        console.log(propName);</span><br><span class="line">        return target[propName];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">const agent = new Proxy(richard, handler);</span><br><span class="line">agent.status; // (1)logs the richard object, (2)logs the property being accessed, (3)returns the text in richard.status</span><br></pre></td></tr></table></figure></p>
-<p>注意我们在 get trap 中添加了最后一行 return target[propName];，这样将会访问目标对象的属性并返回它。</p>
-<p><strong>直接获取 Proxy 的返回信息</strong></p>
-<p>此外，我们可以使用 Proxy 提供直接的反馈：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const richard = &#123;status: &apos;looking for work&apos;&#125;;</span><br><span class="line">const handler = &#123;</span><br><span class="line">    get(target, propName) &#123;</span><br><span class="line">        return `He&apos;s following many leads, so you should offer a contract as soon as possible!`;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">const agent = new Proxy(richard, handler);</span><br><span class="line">agent.status; // returns the text `He&apos;s following many leads, so you should offer a contract as soon as possible!`</span><br></pre></td></tr></table></figure></p>
-<p>对于上述代码，Proxy 甚至不会检查目标对象，直接对调用代码做出响应。</p>
-<p>因此每当 Proxy 上的属性被访问，get trap 将接管任务。如果我们想截获调用以更改属性，则需要使用 set trap！</p>
-<p>set trap 用来截获将更改属性的代码。set trap 将接收： 它代理的对象 被设置的属性 Proxy 的新值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const richard = &#123;status: &apos;looking for work&apos;&#125;;</span><br><span class="line">const handler = &#123;</span><br><span class="line">    set(target, propName, value) &#123;</span><br><span class="line">        if (propName === &apos;payRate&apos;) &#123; // if the pay is being set, take 15% as commission</span><br><span class="line">            value = value * 0.85;</span><br><span class="line">        &#125;</span><br><span class="line">        target[propName] = value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">const agent = new Proxy(richard, handler);</span><br><span class="line">agent.payRate = 1000; // set the actor&apos;s pay to $1,000</span><br><span class="line">agent.payRate; // $850 the actor&apos;s actual pay</span><br></pre></td></tr></table></figure></p>
-<p>在上述代码中，注意 set trap 会检查是否设置了 payRate 属性。如果设置了，Proxy 就从中拿走 15% 的费用作为自己的佣金！当演员的薪酬是一千美元时，因为 payRate 属性已设置，代码从中扣除 15% 的费用，并将实际 payRate 属性设为 850；</p>
-<p><strong>其他 Trap</strong></p>
-<p>我们查看了 get 和 set trap（可能是你最常用到的 Trap）</p>
-<blockquote>
-<p>但是实际上总共有 13 种不同的 Trap，它们都可以用在处理程序中！</p>
-</blockquote>
-<ul>
-<li>get trap - 使 proxy 能处理对属性访问权的调用</li>
-<li>set trap - 使 proxy 能将属性设为新值</li>
-<li>apply trap - 使 proxy 能被调用（被代理的对象是函数）</li>
-<li>has trap - 使 proxy 能使用 in 运算符</li>
-<li>deleteProperty trap - 使 proxy 能确定属性是否被删除</li>
-<li>ownKeys trap - 使 proxy 能处理当所有键被请求时的情况</li>
-<li>construct trap - 使 proxy 能处理 proxy 与 new 关键字一起使用当做构造函数的情形</li>
-<li>defineProperty trap - 使 proxy 能处理当 defineProperty 被用于创建新的对象属性的情形</li>
-<li>getOwnPropertyDescriptor trap - 使 proxy 能获得属性的描述符</li>
-<li>preventExtenions trap - 使 proxy 能对 proxy 对象调用 Object.preventExtensions()</li>
-<li>isExtensible trap - 使 proxy 能对 proxy 对象调用 Object.isExtensible</li>
-<li>getPrototypeOf trap - 使 proxy 能对 proxy 对象调用 Object.getPrototypeOf</li>
-<li>setPrototypeOf trap - 使 proxy 能对 proxy 对象调用 Object.setPrototypeOf</li>
-</ul>
-<p>可以看出，有很多 trap 可以让 proxy 管理如何处理被代理的对象的调用。</p>
 <hr>
-<p>Proxy 对象介于真正的对象和调用代码之间。调用代码与 Proxy 交互，而不是真正的对象。要创建 Proxy：</p>
-<ul>
-<li>使用 new Proxy() 构造函数<ul>
-<li>将被代理的对象传入为第一项</li>
-<li>第二个对象是 handler（处理器）对象</li>
-</ul>
-</li>
-<li>handler 对象由 13 种不同的 trap 之一构成</li>
-<li>trap 是一种函数，将截获对属相的调用，让你运行代码</li>
-<li>如果未定义 trap，默认行为会被发送给目标对象</li>
-</ul>
-<p>Proxy 是一种强大的创建和管理对象之间的交互的新方式。</p>
-<h4 id="3-生成器"><a href="#3-生成器" class="headerlink" title="3. 生成器"></a>3. 生成器</h4><p>每当函数被调用时，JavaScript 引擎就会在函数顶部启动，并运行每行代码，直到到达底部。无法中途停止运行代码，并稍后重新开始。一直都是这种“<strong>运行到结束</strong>”的工作方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function getEmployee() &#123;</span><br><span class="line">    console.log(&apos;the function has started&apos;);</span><br><span class="line"></span><br><span class="line">    const names = [&apos;Amanda&apos;, &apos;Diego&apos;, &apos;Farrin&apos;, &apos;James&apos;, &apos;Kagure&apos;, &apos;Kavita&apos;, &apos;Orit&apos;, &apos;Richard&apos;];</span><br><span class="line"></span><br><span class="line">    for (const name of names) &#123;</span><br><span class="line">        console.log(name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    console.log(&apos;the function has ended&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getEmployee();</span><br></pre></td></tr></table></figure>
-<p>运行上述代码将在控制台中输出以下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">the function has started</span><br><span class="line">Amanda</span><br><span class="line">Diego</span><br><span class="line">Farrin</span><br><span class="line">James</span><br><span class="line">Kagure</span><br><span class="line">Kavita</span><br><span class="line">Orit</span><br><span class="line">Richard</span><br><span class="line">the function has ended</span><br></pre></td></tr></table></figure></p>
-<p>如果你想先输出前三名员工的姓名，然后停止一段时间，稍后再从停下的地方继续输出更多员工的姓名呢？普通函数无法这么做，因为无法中途“暂停”运行函数。</p>
-<p><strong>可暂停的函数</strong></p>
-<p>如果我们希望能够中途暂停运行函数，则需要使用 ES6 中新提供的一种函数，叫做 generator（生成器）函数！我们来看一个示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function* getEmployee() &#123;</span><br><span class="line">    console.log(&apos;the function has started&apos;);</span><br><span class="line"></span><br><span class="line">    const names = [&apos;Amanda&apos;, &apos;Diego&apos;, &apos;Farrin&apos;, &apos;James&apos;, &apos;Kagure&apos;, &apos;Kavita&apos;, &apos;Orit&apos;, &apos;Richard&apos;];</span><br><span class="line"></span><br><span class="line">    for (const name of names) &#123;</span><br><span class="line">        console.log( name );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    console.log(&apos;the function has ended&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>注意到 function 关键字后面的星号（即 *）了吗？星号表示该函数实际上是生成器！</p>
-<p>现在看看当我们尝试运行该函数时，会发生什么：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">getEmployee();</span><br><span class="line"></span><br><span class="line">// this is the response I get in Chrome:</span><br><span class="line">getEmployee &#123;[[GeneratorStatus]]: &quot;suspended&quot;, [[GeneratorReceiver]]: Window&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>生成器的三种写法</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function*  names() &#123;/*  ...  */&#125;</span><br><span class="line"></span><br><span class="line">function * names() &#123; /* ... */ &#125;</span><br><span class="line"></span><br><span class="line">function  *names() &#123; /* ... */ &#125;</span><br><span class="line">//三种写法都成立，但是ES6社区赞成第一种。</span><br></pre></td></tr></table></figure></p>
+<p><strong>案例：GET(来自MDN)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&apos;GET&apos;, &apos;/server&apos;, true);</span><br><span class="line"></span><br><span class="line">xhr.onload = function () &#123;</span><br><span class="line">   // 请求结束后,在此处写处理代码</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xhr.send(null);</span><br><span class="line">// xhr.send(&apos;string&apos;);</span><br><span class="line">// xhr.send(new Blob());</span><br><span class="line">// xhr.send(new Int8Array());</span><br><span class="line">// xhr.send(&#123; form: &apos;data&apos; &#125;);</span><br><span class="line">// xhr.send(document);</span><br></pre></td></tr></table></figure></p>
+<p><strong>案例: POST(来自MDN)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&quot;POST&quot;, &apos;/server&apos;, true);</span><br><span class="line"></span><br><span class="line">//发送合适的请求头信息</span><br><span class="line">xhr.setRequestHeader(&quot;Content-type&quot;, &quot;application/x-www-form-urlencoded&quot;);</span><br><span class="line"></span><br><span class="line">xhr.onreadystatechange = function() &#123;//Call a function when the state changes.</span><br><span class="line">    if(xhr.readyState == XMLHttpRequest.DONE &amp;&amp; xhr.status == 200) &#123;</span><br><span class="line">        // 请求结束后,在此处写处理代码</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">xhr.send(&quot;foo=bar&amp;lorem=ipsum&quot;); </span><br><span class="line">// xhr.send(&apos;string&apos;); </span><br><span class="line">// xhr.send(new Blob()); </span><br><span class="line">// xhr.send(new Int8Array()); </span><br><span class="line">// xhr.send(&#123; form: &apos;data&apos; &#125;); </span><br><span class="line">// xhr.send(document);</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>注意：生成器的星号实际上可以放在 function 关键字和函数名称之间的任何位置。因此三个都是有效的生成器声明！<br>ES6 社区基本同意将星号放在 function 关键字之后（即 function* 名称() { … }）。但是，其他人建议将星号放在函数名称前面。因此请务必注意，星号表示函数是生成器，但是星号的位置并不重要。</p>
-</blockquote>
-<h4 id="4-生成器与迭代器"><a href="#4-生成器与迭代器" class="headerlink" title="4. 生成器与迭代器"></a>4. 生成器与迭代器</h4><blockquote>
-<p>警告：我们在上一部分学习了迭代知识，如果你有点忘记了，请再复习一遍，因为在生成器这部分又会提到迭代！</p>
-</blockquote>
-<p>生成器被调用时，它不会运行函数中的任何代码，而是创建和返回迭代器。该迭代器可以用来运行实际生成器的内部代码。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const generatorIterator = getEmployee();</span><br><span class="line">generatorIterator.next();</span><br></pre></td></tr></table></figure></p>
-<p>产生我们期望的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">the function has started</span><br><span class="line">Amanda</span><br><span class="line">Diego</span><br><span class="line">Farrin</span><br><span class="line">James</span><br><span class="line">Kagure</span><br><span class="line">Kavita</span><br><span class="line">Orit</span><br><span class="line">Richard</span><br><span class="line">the function has ended</span><br></pre></td></tr></table></figure></p>
-<p>如果你自己尝试运行这段代码，迭代器的 .next() 方法第一次被调用时，它会运行生成器中的所有代码。注意到什么了吗？代码始终没有暂停！那么我们要怎么才能实现神奇的暂停功能呢？</p>
-<p><strong>关键字 yield</strong></p>
-<p>关键字 yield 是 ES6 中新出现的关键字。只能用在生成器函数中。yield 会导致生成器暂停下来。我们向我们的生成器中添加 yield，试试看：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function* getEmployee() &#123;</span><br><span class="line">    console.log(&apos;the function has started&apos;);</span><br><span class="line"></span><br><span class="line">    const names = [&apos;Amanda&apos;, &apos;Diego&apos;, &apos;Farrin&apos;, &apos;James&apos;, &apos;Kagure&apos;, &apos;Kavita&apos;, &apos;Orit&apos;, &apos;Richard&apos;];</span><br><span class="line"></span><br><span class="line">    for (const name of names) &#123;</span><br><span class="line">        console.log(name);</span><br><span class="line">        yield;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    console.log(&apos;the function has ended&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>注意，现在 for…of 循环中出现了 yield。如果我们调用该生成器（生成迭代器），然后调用 .next()，将获得以下输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const generatorIterator = getEmployee();</span><br><span class="line">generatorIterator.next();</span><br></pre></td></tr></table></figure></p>
-<p>将输出以下内容到控制台：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">the function has started</span><br><span class="line">Amanda</span><br></pre></td></tr></table></figure></p>
-<p>暂停了！但是要真的确定下，我们看看下次迭代：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">generatorIterator.next();</span><br></pre></td></tr></table></figure></p>
-<p>将以下内容输出到控制台：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Diego</span><br></pre></td></tr></table></figure></p>
-<p>它能完全记住上次停下的地方！它获取到数组中的下一项（Diego），记录它，然后再次触发了 yield，再次暂停。</p>
-<p>现在能够很好的暂停了，但是如果将数据从生成器返回到外面的世界呢？我们可以使用 yield 实现这一点。</p>
-<p><strong>向外面的世界生成数据</strong></p>
-<p>注：我们不再向控制台输出姓名并暂停，而是让代码返回姓名并暂停。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function* getEmployee() &#123;</span><br><span class="line">    console.log(&apos;the function has started&apos;);</span><br><span class="line"></span><br><span class="line">    const names = [&apos;Amanda&apos;, &apos;Diego&apos;, &apos;Farrin&apos;, &apos;James&apos;, &apos;Kagure&apos;, &apos;Kavita&apos;, &apos;Orit&apos;, &apos;Richard&apos;];</span><br><span class="line"></span><br><span class="line">    for (const name of names) &#123;</span><br><span class="line">        yield name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    console.log(&apos;the function has ended&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>注意，现在从 console.log(name); 切换成了 yield name;。做出这一更改后，当生成器运行时，它会把姓名从函数里返回出去，然后暂停执行代码。我们看看具体效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const generatorIterator = getEmployee();</span><br><span class="line">let result = generatorIterator.next();</span><br><span class="line">result.value // is &quot;Amanda&quot;</span><br><span class="line"></span><br><span class="line">generatorIterator.next().value // is &quot;Diego&quot;</span><br><span class="line">generatorIterator.next().value // is &quot;Farrin&quot;</span><br></pre></td></tr></table></figure></p>
-<p><strong>小注意</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function* udacity() &#123;</span><br><span class="line">    yield &apos;Richard&apos;;</span><br><span class="line">    yield &apos;James&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>它被调用的次数将比生成器函数中的 yield 表达式的数量多一次。</p>
-<p>对 .next() 的第一次调用将启动该函数，并运行为第一个 yield。对 .next() 的第二次调用将从暂停的地方继续，并运行第二个 yield。对 .next() 的第三次（即最后一次）调用将再次从暂停的地方继续，并运行到函数结尾处。</p>
-<p><strong>向生成器中发送数据或从中向外发送数据</strong></p>
-<p>我们可以使用关键字 yield 从生成器中获取数据。我们还可以将数据发送回生成器中。方式是使用 .next() 方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function* displayResponse() &#123;</span><br><span class="line">    const response = yield;</span><br><span class="line">    console.log(`Your response is &quot;$&#123;response&#125;&quot;!`);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const iterator = displayResponse();</span><br><span class="line"></span><br><span class="line">iterator.next(); // starts running the generator function</span><br><span class="line">iterator.next(&apos;Hello Udacity Student&apos;); // send data into the generator</span><br><span class="line">// the line above logs to the console: Your response is &quot;Hello Udacity Student&quot;!</span><br></pre></td></tr></table></figure></p>
-<p>使用数据调用 .next()（即 .next(‘Richard’)）会将该数据发送到生成器函数中上次离开的地方。它会将 yield 关键字替换为你提供的数据。</p>
-<p>关键字 yield 用来暂停生成器并向生成器外发送数据，然后 .next() 方法用来向生成器中传入数据。下面是使用这两种过程来一次次地循环访问姓名列表的示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">function* getEmployee() &#123;</span><br><span class="line">    const names = [&apos;Amanda&apos;, &apos;Diego&apos;, &apos;Farrin&apos;, &apos;James&apos;, &apos;Kagure&apos;, &apos;Kavita&apos;, &apos;Orit&apos;, &apos;Richard&apos;];</span><br><span class="line">    const facts = [];</span><br><span class="line"></span><br><span class="line">    for (const name of names) &#123;</span><br><span class="line">        // yield *out* each name AND store the returned data into the facts array</span><br><span class="line">        facts.push(yield name); </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return facts;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const generatorIterator = getEmployee();</span><br><span class="line"></span><br><span class="line">// get the first name out of the generator</span><br><span class="line">let name = generatorIterator.next().value;</span><br><span class="line"></span><br><span class="line">// you get the idea</span><br><span class="line">name = generatorIterator.next(`$&#123;name&#125; is rad!`).value; </span><br><span class="line">name = generatorIterator.next(`$&#123;name&#125; is impressive!`).value;</span><br><span class="line">name = generatorIterator.next(`$&#123;name&#125; is stunning!`).value;</span><br><span class="line">name = generatorIterator.next(`$&#123;name&#125; is awe-inspiring!`).value;</span><br><span class="line"></span><br><span class="line">// pass the last data in, generator ends and returns the array</span><br><span class="line">const positions = generatorIterator.next(`$&#123;name&#125; is magnificent!`).value; </span><br><span class="line"></span><br><span class="line">// displays each name with description on its own line</span><br><span class="line">positions.join(&apos;\n&apos;);</span><br></pre></td></tr></table></figure></p>
-<p>如果运行以下代码，会发生什么？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function* createSundae() &#123;</span><br><span class="line">    const toppings = [];</span><br><span class="line"></span><br><span class="line">    toppings.push(yield);</span><br><span class="line">    toppings.push(yield);</span><br><span class="line">    toppings.push(yield);</span><br><span class="line"></span><br><span class="line">    return toppings;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var it = createSundae();</span><br><span class="line">it.next(&apos;hot fudge&apos;);</span><br><span class="line">it.next(&apos;sprinkles&apos;);</span><br><span class="line">it.next(&apos;whipped cream&apos;);</span><br><span class="line">it.next();</span><br></pre></td></tr></table></figure></p>
-<p>toppings 数组的最后一项将是 undefined</p>
-<p>因为第一次调用 .next() 传入了一些数据。但是该数据没有存储在任何位置。最后一次调用 .next() 应该会获得一些数据，因为生成到对 toppings.push() 的最后一次调用中。</p>
-<blockquote>
-<p>写于：2017/10/28 23:00<br>等待后继更新</p>
+<p>写于：2017/10/29 18:50<br>等待后继更新</p>
 </blockquote>
 
       
@@ -1512,7 +1384,15 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">异步JS请求</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AjAX</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XHR</a>
         		</li>
       		
 		</ul>
@@ -1522,7 +1402,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/28/JS-ES6 新特性(内置方法--2)/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/10/29/异步JS请求（AJAX与XHR）/">展开全文 >></a>
         </p>
       
 
@@ -1665,15 +1545,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">DOM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">CDN小谈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">DOM</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1705,7 +1585,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">黑屏解决方案</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VMware Workstation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1721,11 +1605,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">RegExp</a>
+                <a href="javascript:void(0)" class="js-tag color4">my first</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">数据库笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">RegExp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1737,47 +1633,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Web 标准</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">标签语义化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Bootstrap笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">my first</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mySQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">npm</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">webpack笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">关系类书籍</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">物史类书籍</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">七牛云</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Bootstrap笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1793,11 +1657,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">我的回归</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HTTP笔记</a>
+                <a href="javascript:void(0)" class="js-tag color5">webpack笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1809,6 +1669,22 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">我的回归</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">关系类书籍</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">物史类书籍</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Fetch</a>
               </li>
              
@@ -1817,15 +1693,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心情</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">计算机专业基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1833,7 +1701,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">案例</a>
+                <a href="javascript:void(0)" class="js-tag color2">HTTP笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心情</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Web 标准</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">标签语义化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1845,15 +1729,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">案例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">资源下载库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">语义化版本</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">资源下载库</a>
               </li>
              
               <li class="article-tag-list-item">
