@@ -169,6 +169,179 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-计算机系统概述" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/10/计算机系统概述/">计算机组成原理之计算机系统概述</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/10/计算机系统概述/" class="archive-article-date">
+  	<time datetime="2017-03-10T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="计算机的发展历史"><a href="#计算机的发展历史" class="headerlink" title="计算机的发展历史"></a>计算机的发展历史</h1><h2 id="计算机硬件的发展"><a href="#计算机硬件的发展" class="headerlink" title="计算机硬件的发展"></a>计算机硬件的发展</h2><p><strong>1.计算机的四代</strong></p>
+<p>1946年世界第一台电子计算机<a href="http://baike.baidu.com/item/eniac" target="_blank" rel="external">ENIAC</a>问世以来，计算机已经经历了四代。</p>
+<ul>
+<li>第一代（1946 - 1957年）————电子管时代</li>
+<li>第二代（1958 - 1964年）————晶体管时代<blockquote>
+<p>开始使用高级语言；有了操作系统的雏形 </p>
+</blockquote>
+</li>
+<li>第三代（1965 - 1971年）————中小规模集成电路时代<blockquote>
+<p>出现半导体储存器；高级语言发展迅速；出现分时操作系统</p>
+</blockquote>
+</li>
+<li>第四代（1972 - 现在）————超大规模继承电路时代<blockquote>
+<p>出现微处理器；并行、流水线、高速缓存、虚拟存储器等在计算机中应用</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>2.计算机元件的更新</strong></p>
+<ul>
+<li><a href="http://baike.baidu.com/item/%E6%91%A9%E5%B0%94%E5%AE%9A%E5%BE%8B" target="_blank" rel="external">摩尔定理</a></li>
+<li>半导体存储器的发展</li>
+<li>微处理器的发展</li>
+</ul>
+<h2 id="计算机软件的发展"><a href="#计算机软件的发展" class="headerlink" title="计算机软件的发展"></a>计算机软件的发展</h2><p>计算机语言：面向机器的机器语言、面向问题的高级语言。高级语言的发展真正促进了软件的发展。<br>操作系统：从<a href="http://baike.baidu.com/item/dos/32025" target="_blank" rel="external">DOS</a>到目前的视窗与网络操作系统（<a href="http://baike.baidu.com/item/WINDOWS%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" target="_blank" rel="external">Windows</a>与<a href="http://baike.baidu.com/item/unix" target="_blank" rel="external">Unix</a>、<a href="http://baike.baidu.com/item/linux" target="_blank" rel="external">Linux</a>)。</p>
+<h2 id="计算机的分类与发展方向"><a href="#计算机的分类与发展方向" class="headerlink" title="计算机的分类与发展方向"></a>计算机的分类与发展方向</h2><p>电子计算机可分为：电子模拟计算机、电子数字计算机。<br>数字计算机又可按用途分为：专用计算机、通用计算机。<br>通用计算机又分为：巨型机、大型机、中型机、小型机、微型机、单片机。</p>
+<p>计算按指令和数据流可分为：</p>
+<ul>
+<li>单指令流和单数据流系统（SISD），传统的冯-诺依曼体系结构</li>
+<li>单指令流和多数据流系统（SIMD），包括陈列处理器和向量处理器系统</li>
+<li>多指令流和单数据流系统（MISD），这种计算机实际不存在</li>
+<li>多指令流和多数据流系统（MIMD），包括多处理器和多计算机系统</li>
+</ul>
+<p>计算机的发展趋势正向着“两极”分化。一级是微型计算机向更微型化、网络化、高性能、多用途方向发展。另一极则是巨型机向更巨型化、超高速、并行处理、智能化方向发展。 </p>
+<h1 id="计算机系统层次结构"><a href="#计算机系统层次结构" class="headerlink" title="计算机系统层次结构"></a>计算机系统层次结构</h1><h2 id="计算机系统的组成"><a href="#计算机系统的组成" class="headerlink" title="计算机系统的组成"></a>计算机系统的组成</h2><p>众所周知，<strong>硬件系统</strong>和<strong>软件系统</strong>共同构成了一个完整的计算机系统。</p>
+<blockquote>
+<p>硬件是计算机系统中实际物理装置的总称。软件是指在硬件上运行的程序和相关的数据文档。</p>
+</blockquote>
+<p>一个计算机系统性能的好坏，很大程度上是由软件的效率和作用来表现的，而软件性能的发挥又离不开硬件的支持。<strong>对于某以功能来说，既可以用软件来实现，也可以用硬件来实现，则称为==软硬件在逻辑上是等效的。==</strong></p>
+<blockquote>
+<p>通常同一功能，用软件实现的成本低、灵活性大，用硬件实现的成本高、灵活性不高、效率极高（与软件相比）。所以使用频繁的功能通常是有硬件来实现的。</p>
+</blockquote>
+<h2 id="计算机硬件的基本组成"><a href="#计算机硬件的基本组成" class="headerlink" title="计算机硬件的基本组成"></a>计算机硬件的基本组成</h2><h3 id="早期的冯-诺依曼机"><a href="#早期的冯-诺依曼机" class="headerlink" title="早期的冯-诺依曼机"></a>早期的冯-诺依曼机</h3><p>计算机的硬件系统由：运算器、控制器、存储器、输入设备与输出设备。</p>
+<blockquote>
+<p>“<strong>储存程序</strong>”概念由此而出。此概念奠定了现代计算机的基本结构。（此概念是指：将指令以代码的形式事先输入到计算机主储存器中，然后按照存储器的首地址按顺序执行，直至程序执行结束。）</p>
+</blockquote>
+<h3 id="现在计算机的组织结构"><a href="#现在计算机的组织结构" class="headerlink" title="现在计算机的组织结构"></a>现在计算机的组织结构</h3><p>在微处理器未出现之前，计算机的设计是以运算器为中心的。而现在的计算机则是以存储器为中心所设计的。（所以电脑把以前的机械硬盘升级为固态硬盘然后电脑速度变的比以前快好多倍是有科学和逻辑依据的）</p>
+<h3 id="计算机的功能部件"><a href="#计算机的功能部件" class="headerlink" title="计算机的功能部件"></a>计算机的功能部件</h3><ul>
+<li>输入设备<blockquote>
+<p>功能：将程序和数据以计算机所能识别和接受的信息形式输入到计算机。（鼠标、扫描仪…）</p>
+</blockquote>
+</li>
+<li>输出设备<blockquote>
+<p>将计算处理的结果以人们所能接受的形式或者其他系统所需要的形式输出。（显示器、打印机…）  <strong>计算机的输入输出设备（I/O设备）是计算机与外界联系的桥梁，是计算机中不可缺少的重要组成部分。</strong></p>
+</blockquote>
+</li>
+<li><p>存储器</p>
+<blockquote>
+<p>计算机的存储部件，用来存放程序和数据。存储器分为主存储器（简称主存，也称内存储器）与辅助存储器（简称辅存，也称外部存储器）。CPU能直接访问的是主存但不能直接访问辅存，访问辅存时必须先把辅存中的内容调入主存中，然后再由CPU访问主存，通过这种方法间接的访问辅存。</p>
+</blockquote>
+<p>  主存储器的工作方式是按<strong>存储单元的地址</strong>进行存取的，这种存取方式称为按地址存取方式（相联存储器是按内容访问的）。<br>  主存储器的基本组成：地址寄存器（MAR），存储体，数据寄存器（MDR），时序控制逻辑。</p>
+</li>
+<li>运算器<blockquote>
+<p>是计算机的执行部件，用于对数据进行加工处理，完成算术运算与逻辑运算。运算器的核心是算术逻辑单元ALU。运算器除了有一些运算寄存器以外，还有程序状态寄存器PSW（保留各类运算指令或测试指令的结果的各类状态信息以表征程序运行状态）。</p>
+</blockquote>
+</li>
+<li>控制器<blockquote>
+<p>控制器是计算机的控制中心，由其<strong>指挥</strong>各部件自动的协调的工作。控制器由程序计数器PC、指令寄存器IR、控制单元CU组成。现在的计算机把运算器和控制器集成到一块芯片上，合称为中央处理器，简称CPU。</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="计算机的性能指标"><a href="#计算机的性能指标" class="headerlink" title="计算机的性能指标"></a>计算机的性能指标</h1><p><strong>计算机的主要性能指标一般包括：</strong></p>
+<ul>
+<li>机器字长<blockquote>
+<p>机器字长是指计算机进行一次整数运算（即定点整数运算）所能处理的二级制数据的位数，通常与CPU的寄存器位数、加法器有关。字长越长计算机的计算精度就越高。</p>
+</blockquote>
+</li>
+<li>数据通路带宽<blockquote>
+<p>数据通路带宽是指数据总线一次所能经行并传送信息的位数。</p>
+</blockquote>
+</li>
+<li>主存容量<blockquote>
+<p>主存储器所能存储信息的最大容量。</p>
+</blockquote>
+</li>
+<li>运算速度<ul>
+<li>吞吐量和响应时间</li>
+<li>主频和CPU时钟周期</li>
+<li>CPI（Clock cycle Per Instruction），即执行一条指令所需要的时钟周期。</li>
+<li>CPU执行时间，指运行一个程序所花的时间。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>写于：2017/3/10   23:10<br>第一次更新：2017/3/11  22:00<br>更新内容：计算机系统层次结构<br>第二次更新：2017/3/12   21:00<br>更新内容：计算机的功能部件<br>第三次更新：2017/3/31   10:30<br>更新内容：计算机的性能指标（概括性的写了一些）<br>等待后继更新</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计算机专业基础</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计算机组成原理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/10/计算机系统概述/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Git 的一些补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1009,83 +1182,6 @@ init       Create an empty Git repository or reinitialize an existing one
 
 
   
-    <article id="post-Git 安装、配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/01/Git 安装、配置/">Git的安装与配置</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/01/Git 安装、配置/" class="archive-article-date">
-  	<time datetime="2017-03-01T11:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h2><p>GIT不仅仅是个版本控制系统，它也是个内容管理系统(CMS),工作管理系统等。所以有许多非编程人员也在使用Git与GitHub，比如好多网文作者在使用这个系统，用来管理自己的一些作品以及用来更新后续作品。</p>
-<p><strong>Git 是<a href="http://baike.baidu.com/link?url=2tbsHCP39F44JLBmSA5PQUGvfxI8_Z-qWevwSMXMbQG6h153ocF9xdZ5un31F8J-BSR_2cKxTgLewHN7N0GaHiB2S72ka8SPhLK-JfUSykzWZPC6m4MBD5v4FXMN4jY2m_g_1D4cpNSgf_482mGV1WJK16vdVdmpjqMM35m0Z2K" target="_blank" rel="external">Linus Torvalds（林纳斯·托瓦兹）</a> 为了帮助管理 Linux内核开发而开发的一个开放源码的版本控制软件。</strong>（此人是著名的电脑程序员、黑客、Linux内核的发明人以及该计划的合作者）</p>
-        
-          <a class="article-more-a" href="/2017/03/01/Git 安装、配置/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Git学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/01/Git 安装、配置/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
@@ -1199,15 +1295,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">DOM</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">CDN小谈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">DOM</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1239,11 +1335,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">黑屏解决方案</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VMware Workstation</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1259,27 +1351,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">my first</a>
+                <a href="javascript:void(0)" class="js-tag color2">黑屏解决方案</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">数据库笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mySQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">RegExp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+                <a href="javascript:void(0)" class="js-tag color4">VMware Workstation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1287,11 +1363,43 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color2">RegExp</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">七牛云</a>
+                <a href="javascript:void(0)" class="js-tag color1">数据库笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">my first</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Web 标准</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">标签语义化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">关系类书籍</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">webpack笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1311,7 +1419,27 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">webpack笔记</a>
+                <a href="javascript:void(0)" class="js-tag color5">我的回归</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">HTTP笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">七牛云</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">JQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Fetch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1323,43 +1451,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">我的回归</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">关系类书籍</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">物史类书籍</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Fetch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">JQuery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">计算机专业基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HTTP笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1367,11 +1459,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Web 标准</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">标签语义化</a>
+                <a href="javascript:void(0)" class="js-tag color1">物史类书籍</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1379,19 +1467,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">计算机组成原理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">案例</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">资源下载库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1399,7 +1479,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心情</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">资源下载库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">案例</a>
               </li>
             
             <div class="clearfix"></div>

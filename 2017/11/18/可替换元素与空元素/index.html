@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.diqiuxin.top">
-  <title>Archives: 2017 | 地球心的博客</title>
+  <title>可替换元素与空元素 | 地球心的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="地球心的技术博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="地球心的博客">
-<meta property="og:url" content="http://www.diqiuxin.top/archives/2017/index.html">
+  <meta name="description" content="可替换元素 来自 MDN   CSS 里，可替换元素（replaced element）的展现不是由CSS来控制的。这些元素是一类 外观渲染独立于 CSS 的外部对象。 典型的可替换元素有 &amp;lt;img&amp;gt;、 &amp;lt;object&amp;gt;、 &amp;lt;video&amp;gt; 和 表单元素，如&amp;lt;textarea&amp;gt;、 &amp;lt;input&amp;gt;。  某些元素只在一些特殊情况下表现为可替换元">
+<meta name="keywords" content="HTML笔记,笔试总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="可替换元素与空元素">
+<meta property="og:url" content="http://www.diqiuxin.top/2017/11/18/可替换元素与空元素/index.html">
 <meta property="og:site_name" content="地球心的博客">
-<meta property="og:description" content="地球心的技术博客">
+<meta property="og:description" content="可替换元素 来自 MDN   CSS 里，可替换元素（replaced element）的展现不是由CSS来控制的。这些元素是一类 外观渲染独立于 CSS 的外部对象。 典型的可替换元素有 &amp;lt;img&amp;gt;、 &amp;lt;object&amp;gt;、 &amp;lt;video&amp;gt; 和 表单元素，如&amp;lt;textarea&amp;gt;、 &amp;lt;input&amp;gt;。  某些元素只在一些特殊情况下表现为可替换元">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-18T07:17:23.574Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="地球心的博客">
-<meta name="twitter:description" content="地球心的技术博客">
+<meta name="twitter:title" content="可替换元素与空元素">
+<meta name="twitter:description" content="可替换元素 来自 MDN   CSS 里，可替换元素（replaced element）的展现不是由CSS来控制的。这些元素是一类 外观渲染独立于 CSS 的外部对象。 典型的可替换元素有 &amp;lt;img&amp;gt;、 &amp;lt;object&amp;gt;、 &amp;lt;video&amp;gt; 和 表单元素，如&amp;lt;textarea&amp;gt;、 &amp;lt;input&amp;gt;。  某些元素只在一些特殊情况下表现为可替换元">
   
     <link rel="alternative" href="/atom.xml" title="地球心的博客" type="application/atom+xml">
   
@@ -167,36 +169,96 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-可替换元素与空元素" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/18/可替换元素与空元素/" class="archive-article-date">
-  	<time datetime="2017-11-18T02:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/18/可替换元素与空元素/">可替换元素与空元素</a>
+    <h1 class="article-title" itemprop="name">
+      可替换元素与空元素
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/18/可替换元素与空元素/" class="archive-article-date">
+  	<time datetime="2017-11-18T02:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="可替换元素"><a href="#可替换元素" class="headerlink" title="可替换元素"></a>可替换元素</h2><blockquote>
+<p>来自 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element" target="_blank" rel="external">MDN</a></p>
+</blockquote>
+<ol>
+<li><p>CSS 里，<strong>可替换元素</strong>（replaced element）的展现不是由CSS来控制的。这些元素是一类 <strong>外观渲染独立于 CSS 的外部对象</strong>。 典型的可替换元素有 <code>&lt;img&gt;、 &lt;object&gt;、 &lt;video&gt;</code> 和 表单元素，如<code>&lt;textarea&gt;、 &lt;input&gt;</code>。</p>
+<ol>
+<li>某些元素只在一些特殊情况下表现为可替换元素，例如<code>&lt;audio&gt; 、 &lt;canvas&gt;</code>。 通过 CSS content 属性来插入的对象 被称作 匿名可替换元素（anonymous replaced elements）。</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>CSS在某些情况下会对可替换元素做特殊处理，比如计算外边距和一些auto值。</li>
+<li>需要注意的是，一部分（并非全部）可替换元素，本身具有尺寸和基线（baseline），会被像vertical-align之类的一些 CSS 属性用到。</li>
+</ul>
+<blockquote>
+<p>另一种解释</p>
+</blockquote>
+<p><strong>替换元素</strong>：其内容不受CSS视觉格式化模型控制的元素,比如image,嵌入的文档(iframe之类)或者applet,叫做替换元素。比如,img元素的内容通常会被其src属性指定的图像替换掉。</p>
+<p>CSS渲染模型不考虑替换元素内容的渲染。这些替换元素的展现独立于CSS。object,video,textarea,input也是替换元素,audio和canvas在某些特定情形下为替换元素。使用CSS的content属性插入的对象是匿名替换元素。</p>
+<p><strong>固有尺寸</strong>：宽度和高度是有元素自身定义的,不受周围元素的影响。CSS没有定义如何去寻找替换元素的固有尺寸。</p>
+<p><strong>非替换元素</strong>：替换元素之外的所有其他元素都是非替换元素,由CSS的视觉格式化模型负责非替换元素的渲染。</p>
+<h2 id="空元素"><a href="#空元素" class="headerlink" title="空元素"></a>空元素</h2><blockquote>
+<p>来自 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/%E7%A9%BA%E5%85%83%E7%B4%A0" target="_blank" rel="external">MDN</a></p>
+</blockquote>
+<p>一个空元素（empty element）可能是 HTML，SVG，或者 MathML 里的一个不可能存在子节点（例如内嵌的元素或者元素内的文本）的element。</p>
+<p>HTML，SVG 和 MathML 的规范都详细定义了每个元素能包含的具体内容（define very precisely what each element can contain）。许多组合是没有任何语义含义的，比如一个 <code>&lt;audio&gt;</code> 元素嵌套在一个 <code>&lt;hr&gt;</code> 元素里。</p>
+<p>在 HTML 中，通常在一个空元素上使用一个闭标签是无效的。例如， <code>&lt;input type=&quot;text&quot;&gt;&lt;/input&gt;</code> 的闭标签是无效的 HTML。</p>
+<p>在 HTML 中有以下这些空元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;area&gt;</span><br><span class="line">&lt;base&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;col&gt;</span><br><span class="line">&lt;colgroup&gt; when the span is present</span><br><span class="line">&lt;command&gt;</span><br><span class="line">&lt;embed&gt;</span><br><span class="line">&lt;hr&gt;</span><br><span class="line">&lt;img&gt;</span><br><span class="line">&lt;input&gt;</span><br><span class="line">&lt;keygen&gt;</span><br><span class="line">&lt;link&gt;</span><br><span class="line">&lt;meta&gt;</span><br><span class="line">&lt;param&gt;</span><br><span class="line">&lt;source&gt;</span><br><span class="line">&lt;track&gt;</span><br><span class="line">&lt;wbr&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>写于：2017/11/18 15:20<br>等待后继更新</p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/支付宝_1元.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/微信_1元.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -212,444 +274,105 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.diqiuxin.top/2017/11/18/可替换元素与空元素/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/16/VMware Workstation 黑屏解决方案/" class="archive-article-date">
-  	<time datetime="2017-11-16T08:35:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/16/VMware Workstation 黑屏解决方案/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">VMware Workstation 黑屏解决方案</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/16/VMware Workstation 黑屏解决方案/">VMware Workstation 黑屏解决方案</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">黑屏解决方案</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">VMware Workstation</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/15/如何使用 Hexo 搭建了你的博客系统/" class="archive-article-date">
-  	<time datetime="2017-11-15T05:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/15/如何使用 Hexo 搭建了你的博客系统/">如何使用 Hexo 搭建了你的博客系统</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">博客系统搭建</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/12/关于 Unicode 与 utf-8 的关系（面试题）/" class="archive-article-date">
-  	<time datetime="2017-11-12T05:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/12/关于 Unicode 与 utf-8 的关系（面试题）/">关于 Unicode 与 utf-8 的关系（面试题）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">字符集</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/05/mySQL 基础/" class="archive-article-date">
-  	<time datetime="2017-11-05T13:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/05/mySQL 基础/">mySQL基础</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">数据库笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mySQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/05/SQL 基础/" class="archive-article-date">
-  	<time datetime="2017-11-05T08:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/05/SQL 基础/">SQL基础</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">数据库笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/01/异步JS请求（AJAX与XHR-JQuery-Fetch）/" class="archive-article-date">
-  	<time datetime="2017-11-01T15:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/01/异步JS请求（AJAX与XHR-JQuery-Fetch）/">异步JS请求（AJAX与Fetch）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">异步JS请求</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AjAX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XHR</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JQuery</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Fetch</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/异步JS请求（AJAX与Fetch）/" class="archive-article-date">
-  	<time datetime="2017-10-31T11:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/异步JS请求（AJAX与Fetch）/">异步JS请求（AJAX与Fetch）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">异步JS请求</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AjAX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Fetch</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/29/异步JS请求（AJAX与JQuery）/" class="archive-article-date">
-  	<time datetime="2017-10-29T11:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/29/异步JS请求（AJAX与JQuery）/">异步JS请求（AJAX与JQuery）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">异步JS请求</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AjAX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/29/异步JS请求（AJAX与XHR）/" class="archive-article-date">
-  	<time datetime="2017-10-29T07:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/29/异步JS请求（AJAX与XHR）/">异步JS请求（AJAX与XHR）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">异步JS请求</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AjAX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XHR</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="page-number" href="/archives/2017/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2017/page/7/">7</a><a class="extend next" rel="next" href="/archives/2017/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -673,8 +396,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

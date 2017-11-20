@@ -169,6 +169,114 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-可替换元素与空元素" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/18/可替换元素与空元素/">可替换元素与空元素</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/18/可替换元素与空元素/" class="archive-article-date">
+  	<time datetime="2017-11-18T02:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="可替换元素"><a href="#可替换元素" class="headerlink" title="可替换元素"></a>可替换元素</h2><blockquote>
+<p>来自 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element" target="_blank" rel="external">MDN</a></p>
+</blockquote>
+<ol>
+<li><p>CSS 里，<strong>可替换元素</strong>（replaced element）的展现不是由CSS来控制的。这些元素是一类 <strong>外观渲染独立于 CSS 的外部对象</strong>。 典型的可替换元素有 <code>&lt;img&gt;、 &lt;object&gt;、 &lt;video&gt;</code> 和 表单元素，如<code>&lt;textarea&gt;、 &lt;input&gt;</code>。</p>
+<ol>
+<li>某些元素只在一些特殊情况下表现为可替换元素，例如<code>&lt;audio&gt; 、 &lt;canvas&gt;</code>。 通过 CSS content 属性来插入的对象 被称作 匿名可替换元素（anonymous replaced elements）。</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>CSS在某些情况下会对可替换元素做特殊处理，比如计算外边距和一些auto值。</li>
+<li>需要注意的是，一部分（并非全部）可替换元素，本身具有尺寸和基线（baseline），会被像vertical-align之类的一些 CSS 属性用到。</li>
+</ul>
+<blockquote>
+<p>另一种解释</p>
+</blockquote>
+<p><strong>替换元素</strong>：其内容不受CSS视觉格式化模型控制的元素,比如image,嵌入的文档(iframe之类)或者applet,叫做替换元素。比如,img元素的内容通常会被其src属性指定的图像替换掉。</p>
+<p>CSS渲染模型不考虑替换元素内容的渲染。这些替换元素的展现独立于CSS。object,video,textarea,input也是替换元素,audio和canvas在某些特定情形下为替换元素。使用CSS的content属性插入的对象是匿名替换元素。</p>
+<p><strong>固有尺寸</strong>：宽度和高度是有元素自身定义的,不受周围元素的影响。CSS没有定义如何去寻找替换元素的固有尺寸。</p>
+<p><strong>非替换元素</strong>：替换元素之外的所有其他元素都是非替换元素,由CSS的视觉格式化模型负责非替换元素的渲染。</p>
+<h2 id="空元素"><a href="#空元素" class="headerlink" title="空元素"></a>空元素</h2><blockquote>
+<p>来自 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/%E7%A9%BA%E5%85%83%E7%B4%A0" target="_blank" rel="external">MDN</a></p>
+</blockquote>
+<p>一个空元素（empty element）可能是 HTML，SVG，或者 MathML 里的一个不可能存在子节点（例如内嵌的元素或者元素内的文本）的element。</p>
+<p>HTML，SVG 和 MathML 的规范都详细定义了每个元素能包含的具体内容（define very precisely what each element can contain）。许多组合是没有任何语义含义的，比如一个 <code>&lt;audio&gt;</code> 元素嵌套在一个 <code>&lt;hr&gt;</code> 元素里。</p>
+<p>在 HTML 中，通常在一个空元素上使用一个闭标签是无效的。例如， <code>&lt;input type=&quot;text&quot;&gt;&lt;/input&gt;</code> 的闭标签是无效的 HTML。</p>
+<p>在 HTML 中有以下这些空元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;area&gt;</span><br><span class="line">&lt;base&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;col&gt;</span><br><span class="line">&lt;colgroup&gt; when the span is present</span><br><span class="line">&lt;command&gt;</span><br><span class="line">&lt;embed&gt;</span><br><span class="line">&lt;hr&gt;</span><br><span class="line">&lt;img&gt;</span><br><span class="line">&lt;input&gt;</span><br><span class="line">&lt;keygen&gt;</span><br><span class="line">&lt;link&gt;</span><br><span class="line">&lt;meta&gt;</span><br><span class="line">&lt;param&gt;</span><br><span class="line">&lt;source&gt;</span><br><span class="line">&lt;track&gt;</span><br><span class="line">&lt;wbr&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>写于：2017/11/18 15:20<br>等待后继更新</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">HTML笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">笔试总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/18/可替换元素与空元素/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-VMware Workstation 黑屏解决方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -894,11 +1002,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Fetch</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JQuery</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JQuery</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Fetch</a>
         		</li>
       		
 		</ul>
@@ -1135,140 +1243,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/10/29/异步JS请求（AJAX与JQuery）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-AJAX与XHR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/29/AJAX与XHR/">异步JS请求（AJAX与XHR）</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/29/AJAX与XHR/" class="archive-article-date">
-  	<time datetime="2017-10-29T07:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>主要内容</strong></p>
-<ol>
-<li>xhr的基本使用<ul>
-<li>.open()</li>
-<li>.send()</li>
-<li>.onload()  请求成功时的处理</li>
-<li>.onerror()  请求失败是的处理</li>
-<li>xhr的完整请求</li>
-</ul>
-</li>
-<li>xhr用法回顾</li>
-</ol>
-<h4 id="xhr的基本使用"><a href="#xhr的基本使用" class="headerlink" title="xhr的基本使用"></a>xhr的基本使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&apos;GET&apos;,&apos;https://www.diqiuxin.top/&apos;);</span><br></pre></td></tr></table></figure>
-<p><strong>.open()常用的两种方法</strong></p>
-<ul>
-<li>GET - 检索数据</li>
-<li>POST - 发送数据</li>
-</ul>
-<p>.open()的第三参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&apos;GET&apos;,&apos;https://www.diqiuxin.top/&apos;,false);</span><br></pre></td></tr></table></figure></p>
-<p>将 false 传递为第三个参数使 XHR 请求变成非异步请求。这将导致 JavaScript 引擎暂停并等待返回该请求，然后再继续。这种“暂停并等待”也称为“阻止”。</p>
-<p>这是种很糟糕的做法，完全与异步行为的目的相违背。请勿如此设置你的 XHR 对象！要么将第三个参数设为 true 或留空（默认第变成 true）。</p>
-<p><strong>.send()</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&apos;GET&apos;,&apos;https://www.diqiuxin.top/&apos;);</span><br><span class="line">xhr.send();  </span><br><span class="line">//返回：undefined</span><br></pre></td></tr></table></figure></p>
-<p>内容发送后，没有做任何处理，就只会返回undefined。</p>
-<p><strong>.onload 请求成功时的处理</strong></p>
-<p>要处理 XHR 请求的成功响应，我们将对象上的 onload 属性设为将处理它的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> function handleSuccess() &#123;</span><br><span class="line">    // in the function, the `this` value is the XHR object</span><br><span class="line">    // this.responseText holds the response from the server</span><br><span class="line"></span><br><span class="line">    console.log(this.responseText); // the HTML of https://unsplash.com/</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">xhr.onload = handleSuccess;</span><br></pre></td></tr></table></figure></p>
-<p>如果未设置 onload，则请求的确会返回（undefined），但是它什么也不会发生。</p>
-<p><strong>.onerror 请求出现错误时的处理</strong></p>
-<p>如果请求成功，则调用 onload。如果请求出现问题，无法实现请求，则我们需要使用 onerror 属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function handleError () &#123;</span><br><span class="line">    // in the function, the `this` value is the XHR object</span><br><span class="line">    console.log( &apos;An error occurred 😞&apos; );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">xhr.onerror = handleError;</span><br></pre></td></tr></table></figure></p>
-<p>和 onload 一样，如果 onerror 未设置，并且出现错误，则该错误将继续发生，但是没有任何提示，代码（以及用户）将不知道发生了什么问题，也不知道如何恢复。</p>
-<p><strong>完整的请求</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">const searchedForText = &apos;hippos&apos;;</span><br><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">xhr.open(&apos;GET&apos;, `https://api.unsplash.com/search/photos?page=1&amp;query=$&#123;searchedForText&#125;`);</span><br><span class="line">xhr.onload = addImage;</span><br><span class="line">xhr.onerror = handleError;</span><br><span class="line">xhr.setRequestHeader(&apos;Authorization&apos;, &apos;Client-ID &lt;your-client-id&gt;&apos;);</span><br><span class="line">xhr.send();</span><br><span class="line"></span><br><span class="line">function addImage()&#123;</span><br><span class="line">    let htmlContent = &apos;&apos;;</span><br><span class="line">    const data = JSON.parse(this.responseText);</span><br><span class="line">    </span><br><span class="line">    if (data &amp;&amp; data.results &amp;&amp; data.results[0]) &#123;</span><br><span class="line">        comst firsImage = data.results[0];</span><br><span class="line">        htmlContent = `&lt;figure&gt;</span><br><span class="line">            &lt;img src=&quot;$&#123;firstImage.urls.regular&#125;&quot; alt=&quot;$&#123;searchedForText&#125;&quot;&gt;</span><br><span class="line">            &lt;figcaption&gt;$&#123;searchedForText&#125; by $&#123;firstImage.user.name&#125;&lt;/figcaption&gt;</span><br><span class="line">        &lt;/figure&gt;`;</span><br><span class="line">    &#125; else &#123;  //请求失败时的情况</span><br><span class="line">        htmlContent = `&lt;div class=&quot;reeor-no-image&quot;&gt;No images available&lt;/div&gt;`;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    responseContainer.insertAdjacentHTML(&apos;afterbegin&apos;,htmlContent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在向 API 发出请求并返回 JSON 时，我们只需将该 JSON 响应转换为 JavaScript 对象。为此，我们可以使用 JSON.parse();。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function handleSuccess () &#123;</span><br><span class="line">const data = JSON.parse( this.responseText ); // convert data from JSON to a JavaScript object</span><br><span class="line">console.log( data );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">xhr.onload = handleSuccess;</span><br></pre></td></tr></table></figure></p>
-<h4 id="XHR-用法回顾"><a href="#XHR-用法回顾" class="headerlink" title="XHR 用法回顾"></a>XHR 用法回顾</h4><p><strong>要发出异步请求</strong></p>
-<ul>
-<li>使用 XMLHttpRequest 构造函数创建 XHR 对象</li>
-<li>使用 .open() 方法 - 设置 HTTP 方法和要获取的资源的 URL</li>
-<li>设置 .onload 属性 - 将此属性设为成功获取数据后将运行的函数</li>
-<li>设置 .onerror 属性 - 将此属性设为出现错误后将运行的函数</li>
-<li>使用 .send() 方法 - 发送请求</li>
-</ul>
-<p><strong>要使用响应</strong></p>
-<ul>
-<li>使用 .responseText 属性 - 存储异步请求响应的文本</li>
-</ul>
-<hr>
-<p><strong>案例：GET(来自MDN)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&apos;GET&apos;, &apos;/server&apos;, true);</span><br><span class="line"></span><br><span class="line">xhr.onload = function () &#123;</span><br><span class="line">   // 请求结束后,在此处写处理代码</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xhr.send(null);</span><br><span class="line">// xhr.send(&apos;string&apos;);</span><br><span class="line">// xhr.send(new Blob());</span><br><span class="line">// xhr.send(new Int8Array());</span><br><span class="line">// xhr.send(&#123; form: &apos;data&apos; &#125;);</span><br><span class="line">// xhr.send(document);</span><br></pre></td></tr></table></figure></p>
-<p><strong>案例: POST(来自MDN)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&quot;POST&quot;, &apos;/server&apos;, true);</span><br><span class="line"></span><br><span class="line">//发送合适的请求头信息</span><br><span class="line">xhr.setRequestHeader(&quot;Content-type&quot;, &quot;application/x-www-form-urlencoded&quot;);</span><br><span class="line"></span><br><span class="line">xhr.onreadystatechange = function() &#123;//Call a function when the state changes.</span><br><span class="line">    if(xhr.readyState == XMLHttpRequest.DONE &amp;&amp; xhr.status == 200) &#123;</span><br><span class="line">        // 请求结束后,在此处写处理代码</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">xhr.send(&quot;foo=bar&amp;lorem=ipsum&quot;); </span><br><span class="line">// xhr.send(&apos;string&apos;); </span><br><span class="line">// xhr.send(new Blob()); </span><br><span class="line">// xhr.send(new Int8Array()); </span><br><span class="line">// xhr.send(&#123; form: &apos;data&apos; &#125;); </span><br><span class="line">// xhr.send(document);</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>写于：2017/10/29 18:50<br>等待后继更新</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">异步JS请求</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AjAX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XHR</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/29/AJAX与XHR/">展开全文 >></a>
         </p>
       
 
@@ -1545,15 +1519,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">DOM</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">CDN小谈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">DOM</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1585,11 +1559,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">黑屏解决方案</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VMware Workstation</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1605,27 +1575,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">my first</a>
+                <a href="javascript:void(0)" class="js-tag color2">黑屏解决方案</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">数据库笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mySQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">RegExp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+                <a href="javascript:void(0)" class="js-tag color4">VMware Workstation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1633,11 +1587,43 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm</a>
+                <a href="javascript:void(0)" class="js-tag color2">RegExp</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">七牛云</a>
+                <a href="javascript:void(0)" class="js-tag color1">数据库笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">my first</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Web 标准</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">标签语义化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">关系类书籍</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">webpack笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1657,7 +1643,27 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">webpack笔记</a>
+                <a href="javascript:void(0)" class="js-tag color5">我的回归</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">HTTP笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">七牛云</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">JQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Fetch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">npm</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1669,43 +1675,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">我的回归</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">关系类书籍</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">物史类书籍</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Fetch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">JQuery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">计算机专业基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">HTTP笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1713,11 +1683,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Web 标准</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">标签语义化</a>
+                <a href="javascript:void(0)" class="js-tag color1">物史类书籍</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1725,19 +1691,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">计算机组成原理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">案例</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">资源下载库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1745,7 +1703,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心情</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">资源下载库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">案例</a>
               </li>
             
             <div class="clearfix"></div>
